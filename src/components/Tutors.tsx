@@ -1,4 +1,4 @@
-import { Award, Clock, TrendingUp } from "lucide-react";
+import { Award, Clock, TrendingUp, PenTool } from "lucide-react";
 import danielPhoto from "@/assets/daniel-wellisch.jpeg";
 
 const Tutors = () => {
@@ -14,9 +14,14 @@ const Tutors = () => {
       description: "Unweighted academic record",
     },
     {
+      icon: PenTool,
+      label: "Competition Writer",
+      description: "Research and essay competitions",
+    },
+    {
       icon: Clock,
-      label: "6 Days/Week",
-      description: "Training as competitive rower",
+      label: "Elite Athlete",
+      description: "Nationally competitive rower",
     },
   ];
 
@@ -62,20 +67,29 @@ const Tutors = () => {
                 </div>
 
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Daniel is a high school student and competitive rower at a top rowing 
-                  club, training six days per week. He ranks in the top 1% nationally in 
-                  quantitative reasoning and scored a near perfect math score on his first 
-                  SAT attempt.
+                  Daniel is a high school student and nationally competitive rower training 
+                  six days per week at one of the top rowing programs in the country. He ranks 
+                  in the top 1% nationally in quantitative reasoning and scored a near perfect 
+                  math score on his first SAT attempt.
+                </p>
+
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Beyond athletics, Daniel has distinguished himself in academic competitions 
+                  and scholarly pursuits. He has experience in competitive writing, having 
+                  participated in essay and research competitions at the regional and national 
+                  level. His research background spans multiple disciplines, with a focus on 
+                  analytical thinking and evidence based argumentation.
                 </p>
 
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  Alongside athletics, he maintains a 99 unweighted GPA (4.0), demonstrating 
-                  strong discipline, time management, and consistency. Daniel tutors math 
-                  for students in grades 5 through 10.
+                  Maintaining a 99 unweighted GPA (4.0) while balancing elite athletics and 
+                  academic competitions demonstrates his exceptional discipline, time management, 
+                  and commitment to excellence. Daniel brings this same dedication to every 
+                  student he works with.
                 </p>
 
                 {/* Credential Badges */}
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                   {credentials.map((cred) => (
                     <div key={cred.label} className="text-center transition-all duration-300 hover:-translate-y-1">
                       <div className="w-10 h-10 bg-accent/10 rounded-lg mx-auto mb-2 flex items-center justify-center">
