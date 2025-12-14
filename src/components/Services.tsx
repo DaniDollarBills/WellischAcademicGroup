@@ -4,8 +4,8 @@ const services = [
   {
     icon: Calculator,
     title: "Math Tutoring",
-    description: "From 5th grade math through 10th grade — including Pre-Algebra, Algebra, Geometry, and more. Clear explanations and step-by-step problem solving.",
-    subjects: ["5th-6th Grade Math", "Pre-Algebra", "Algebra I & II", "Geometry"],
+    description: "From 5th through 9th grade — including Pre-Algebra, Algebra, and Geometry. Clear explanations and step-by-step problem solving for every level.",
+    subjects: ["5th-9th Grade Math", "Pre-Algebra", "Algebra I", "Geometry"],
   },
   {
     icon: FlaskConical,
