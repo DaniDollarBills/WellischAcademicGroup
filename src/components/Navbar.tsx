@@ -36,15 +36,18 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { href: "#services", label: "Services" },
-    { href: "#results", label: "Results" },
-    { href: "#how-it-works", label: "How It Works" },
-    { href: "#about", label: "About" },
-    { href: "#contact", label: "Contact" },
+    { id: "services", label: "Services" },
+    { id: "results", label: "Results" },
+    { id: "how-it-works", label: "How It Works" },
+    { id: "about", label: "About" },
+    { id: "contact", label: "Contact" },
   ];
 
-  const scrollToContact = () => {
-    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
     setIsOpen(false);
   };
 
@@ -70,29 +73,32 @@ const Navbar = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <a href="#" className="flex items-center gap-3 transition-transform duration-300 hover:scale-105">
+            <button 
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="flex items-center gap-2 sm:gap-3 transition-transform duration-300 hover:scale-105"
+            >
               <img src={logo} alt="Wellisch Academic Group" className="w-8 h-8 rounded-lg" />
-              <span className={`font-serif text-xl transition-colors duration-300 ${
+              <span className={`font-serif text-lg sm:text-xl transition-colors duration-300 ${
                 isScrolled ? 'text-foreground' : 'text-primary-foreground'
               }`}>
-                Wellisch<span className="text-gold"> Academic Group</span>
+                <span className="hidden xs:inline">Wellisch</span><span className="text-gold"> Academic</span>
               </span>
-            </a>
+            </button>
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-8">
               {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
+                <button
+                  key={link.id}
+                  onClick={() => scrollToSection(link.id)}
                   className={`transition-all duration-300 text-sm font-medium hover:text-gold ${
                     isScrolled ? 'text-muted-foreground hover:text-foreground' : 'text-primary-foreground/80 hover:text-primary-foreground'
                   }`}
                 >
                   {link.label}
-                </a>
+                </button>
               ))}
-              <Button variant="gold" size="sm" onClick={scrollToContact} className="transition-transform duration-300 hover:scale-105">
+              <Button variant="gold" size="sm" onClick={() => scrollToSection("contact")} className="transition-transform duration-300 hover:scale-105">
                 Get Started
               </Button>
             </div>
@@ -114,16 +120,15 @@ const Navbar = () => {
             <div className="lg:hidden py-4 border-t border-border bg-card/98 backdrop-blur-md animate-fade-in">
               <div className="flex flex-col gap-4">
                 {navLinks.map((link) => (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className="text-muted-foreground hover:text-foreground transition-colors text-base font-medium px-2"
+                  <button
+                    key={link.id}
+                    onClick={() => scrollToSection(link.id)}
+                    className="text-muted-foreground hover:text-foreground transition-colors text-base font-medium px-2 text-left"
                   >
                     {link.label}
-                  </a>
+                  </button>
                 ))}
-                <Button variant="gold" className="mt-2" onClick={scrollToContact}>
+                <Button variant="gold" className="mt-2" onClick={() => scrollToSection("contact")}>
                   Get Started
                 </Button>
               </div>

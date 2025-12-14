@@ -148,45 +148,45 @@ const Results = () => {
           </div>
         </div>
 
-        {/* Before/After Table */}
+        {/* Before/After Cards - Mobile Friendly */}
         <div className="max-w-4xl mx-auto mb-20">
           <h3 className="font-serif text-2xl text-foreground text-center mb-8">
             Sample Student Transformations
           </h3>
-          <div className="bg-card rounded-2xl shadow-card border border-border/50 overflow-hidden">
-            <div className="grid grid-cols-5 gap-4 p-4 bg-navy/5 font-semibold text-sm text-foreground">
-              <div>Subject</div>
-              <div className="text-center">Before</div>
-              <div className="text-center">After</div>
-              <div className="text-center">Timeline</div>
-              <div className="text-center">Change</div>
-            </div>
-            {beforeAfter.map((row, index) => (
+          <div className="grid sm:grid-cols-2 gap-4">
+            {beforeAfter.map((row) => (
               <div 
                 key={row.subject}
-                className={`grid grid-cols-5 gap-4 p-4 items-center transition-all duration-300 hover:bg-gold/5 ${
-                  index !== beforeAfter.length - 1 ? 'border-b border-border/50' : ''
-                }`}
+                className="bg-card rounded-xl shadow-card border border-border/50 p-6 transition-all duration-300 hover:shadow-lg"
               >
-                <div className="font-medium text-foreground">{row.subject}</div>
-                <div className="text-center">
-                  <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-red-100 text-red-600 font-bold text-sm">
-                    {row.before}
-                  </span>
-                </div>
-                <div className="text-center">
-                  <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-100 text-green-600 font-bold text-sm">
-                    {row.after}
-                  </span>
-                </div>
-                <div className="text-center text-muted-foreground text-sm">
-                  {row.weeks}
-                </div>
-                <div className="text-center">
-                  <span className="inline-flex items-center gap-1 text-green-600 font-bold text-sm">
-                    <ArrowUpRight className="w-4 h-4" />
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <h4 className="font-semibold text-foreground text-lg">{row.subject}</h4>
+                    <p className="text-muted-foreground text-sm">{row.weeks}</p>
+                  </div>
+                  <span className="inline-flex items-center gap-1 text-green-600 font-bold text-sm bg-green-100 px-2 py-1 rounded-full">
+                    <ArrowUpRight className="w-3 h-3" />
                     {row.improvement}
                   </span>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="text-center">
+                    <span className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-red-100 text-red-600 font-bold text-xl">
+                      {row.before}
+                    </span>
+                    <p className="text-xs text-muted-foreground mt-1">Before</p>
+                  </div>
+                  <div className="flex-1 flex items-center justify-center">
+                    <div className="w-full h-0.5 bg-gradient-to-r from-red-300 via-gold to-green-400 relative">
+                      <ArrowUpRight className="w-5 h-5 text-gold absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-card" />
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <span className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-green-100 text-green-600 font-bold text-xl">
+                      {row.after}
+                    </span>
+                    <p className="text-xs text-muted-foreground mt-1">After</p>
+                  </div>
                 </div>
               </div>
             ))}
