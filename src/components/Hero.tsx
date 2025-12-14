@@ -45,8 +45,8 @@ const Hero = () => {
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-up-delay-2">
-            Personalized tutoring that builds lasting habits and deep understanding. 
-            See quick wins in weeks, transformational results over time — plus ongoing 
+            Personalized tutoring that builds lasting study habits and deep understanding. 
+            See quick wins in weeks, transformational results over time, plus ongoing 
             support whenever your student needs help.
           </p>
 
