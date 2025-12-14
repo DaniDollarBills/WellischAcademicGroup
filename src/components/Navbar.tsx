@@ -78,10 +78,10 @@ const Navbar = () => {
               className="flex items-center gap-2 sm:gap-3 transition-transform duration-300 hover:scale-105"
             >
               <img src={logo} alt="Wellisch Academic Group" className="w-8 h-8 rounded-lg" />
-              <span className={`font-serif text-lg sm:text-xl transition-colors duration-300 ${
+              <span className={`font-serif text-base sm:text-xl transition-colors duration-300 ${
                 isScrolled ? 'text-foreground' : 'text-primary-foreground'
               }`}>
-                <span className="hidden xs:inline">Wellisch</span><span className="text-gold"> Academic</span>
+                Wellisch<span className="text-gold"> Academic Group</span>
               </span>
             </button>
 
