@@ -1,8 +1,9 @@
-import { Award, Clock, TrendingUp, PenTool } from "lucide-react";
+import { Award, Clock, TrendingUp, PenTool, Lightbulb, Target } from "lucide-react";
 import danielPhoto from "@/assets/daniel-wellisch.jpeg";
+import liamPhoto from "@/assets/liam-wellisch.png";
 
 const Tutors = () => {
-  const credentials = [
+  const danielCredentials = [
     {
       icon: TrendingUp,
       label: "Top 1% Nationally",
@@ -16,39 +17,64 @@ const Tutors = () => {
     {
       icon: PenTool,
       label: "Competition Writer",
-      description: "Research and essay competitions",
+      description: "Research and essays",
     },
     {
       icon: Clock,
       label: "Elite Athlete",
-      description: "Nationally competitive rower",
+      description: "Competitive rower",
+    },
+  ];
+
+  const liamCredentials = [
+    {
+      icon: Target,
+      label: "Driven Leader",
+      description: "Entrepreneurial mindset",
+    },
+    {
+      icon: Award,
+      label: "Strong Academic",
+      description: "Dedicated student",
+    },
+    {
+      icon: Lightbulb,
+      label: "Problem Solver",
+      description: "Analytical thinker",
+    },
+    {
+      icon: Clock,
+      label: "Elite Athlete",
+      description: "Competitive rower",
     },
   ];
 
   return (
-    <section id="about" className="py-20 lg:py-28 bg-subtle">
+    <section id="about" className="py-16 lg:py-28 bg-subtle">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-12 lg:mb-16">
           <p className="text-gold font-medium text-sm uppercase tracking-wider mb-3">
-            About Us
+            Meet the Team
           </p>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground mb-4">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-5xl text-foreground mb-4">
             Dedicated to Your Success
           </h2>
-          <p className="text-muted-foreground text-lg">
-            Learn from someone who understands the challenges students face and knows 
+          <p className="text-muted-foreground text-base lg:text-lg">
+            Learn from tutors who understand the challenges students face and know 
             how to help them succeed.
           </p>
         </div>
 
-        {/* Tutor Card */}
-        <div className="max-w-4xl mx-auto">
+        {/* Co-Founders Grid */}
+        <div className="space-y-8 lg:space-y-12 max-w-5xl mx-auto">
+          
+          {/* Daniel */}
           <div className="bg-card rounded-2xl shadow-card border border-border/50 overflow-hidden transition-all duration-500 hover:shadow-lg">
             <div className="grid lg:grid-cols-5 gap-0">
               {/* Photo */}
-              <div className="lg:col-span-2 bg-navy/5 flex items-center justify-center p-8 lg:p-0">
-                <div className="w-48 h-48 lg:w-full lg:h-full lg:min-h-[380px] overflow-hidden rounded-xl lg:rounded-none">
+              <div className="lg:col-span-2 bg-navy/5 flex items-center justify-center p-6 lg:p-0">
+                <div className="w-40 h-40 lg:w-full lg:h-full lg:min-h-[320px] overflow-hidden rounded-xl lg:rounded-none">
                   <img 
                     src={danielPhoto} 
                     alt="Daniel Wellisch" 
@@ -58,45 +84,100 @@ const Tutors = () => {
               </div>
 
               {/* Info */}
-              <div className="lg:col-span-3 p-8 lg:p-10">
-                <div className="mb-6">
-                  <h3 className="font-serif text-2xl lg:text-3xl text-foreground mb-1">
+              <div className="lg:col-span-3 p-6 lg:p-8">
+                <div className="mb-4">
+                  <h3 className="font-serif text-xl lg:text-2xl text-foreground mb-1">
                     Daniel Wellisch
                   </h3>
-                  <p className="text-gold font-medium">Founder</p>
+                  <p className="text-gold font-medium text-sm">Co-Founder</p>
                 </div>
 
-                <p className="text-muted-foreground leading-relaxed mb-6">
+                <p className="text-muted-foreground leading-relaxed mb-3 text-sm lg:text-base">
                   Daniel is a high school student and nationally competitive rower training 
                   six days per week at one of the top rowing programs in the country. He ranks 
                   in the top 1% nationally in quantitative reasoning and scored a near perfect 
                   math score on his first SAT attempt.
                 </p>
 
-                <p className="text-muted-foreground leading-relaxed mb-4">
+                <p className="text-muted-foreground leading-relaxed mb-3 text-sm lg:text-base">
                   Beyond athletics, Daniel has distinguished himself in academic competitions 
                   and scholarly pursuits. He has experience in competitive writing, having 
                   participated in essay and research competitions at the regional and national 
-                  level. His research background spans multiple disciplines, with a focus on 
-                  analytical thinking and evidence based argumentation.
+                  level.
                 </p>
 
-                <p className="text-muted-foreground leading-relaxed mb-8">
+                <p className="text-muted-foreground leading-relaxed mb-6 text-sm lg:text-base">
                   Maintaining a 99 unweighted GPA (4.0) while balancing elite athletics and 
-                  academic competitions demonstrates his exceptional discipline, time management, 
-                  and commitment to excellence. Daniel brings this same dedication to every 
-                  student he works with.
+                  academic competitions demonstrates his exceptional discipline and commitment 
+                  to excellence.
                 </p>
 
                 {/* Credential Badges */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                  {credentials.map((cred) => (
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  {danielCredentials.map((cred) => (
                     <div key={cred.label} className="text-center transition-all duration-300 hover:-translate-y-1">
-                      <div className="w-10 h-10 bg-accent/10 rounded-lg mx-auto mb-2 flex items-center justify-center">
-                        <cred.icon className="w-5 h-5 text-gold" />
+                      <div className="w-9 h-9 bg-accent/10 rounded-lg mx-auto mb-1.5 flex items-center justify-center">
+                        <cred.icon className="w-4 h-4 text-gold" />
                       </div>
-                      <p className="font-semibold text-foreground text-sm">{cred.label}</p>
-                      <p className="text-muted-foreground text-xs">{cred.description}</p>
+                      <p className="font-semibold text-foreground text-xs">{cred.label}</p>
+                      <p className="text-muted-foreground text-[10px]">{cred.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Liam */}
+          <div className="bg-card rounded-2xl shadow-card border border-border/50 overflow-hidden transition-all duration-500 hover:shadow-lg">
+            <div className="grid lg:grid-cols-5 gap-0">
+              {/* Photo */}
+              <div className="lg:col-span-2 bg-navy/5 flex items-center justify-center p-6 lg:p-0">
+                <div className="w-40 h-40 lg:w-full lg:h-full lg:min-h-[320px] overflow-hidden rounded-xl lg:rounded-none">
+                  <img 
+                    src={liamPhoto} 
+                    alt="Liam Wellisch" 
+                    className="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105"
+                  />
+                </div>
+              </div>
+
+              {/* Info */}
+              <div className="lg:col-span-3 p-6 lg:p-8">
+                <div className="mb-4">
+                  <h3 className="font-serif text-xl lg:text-2xl text-foreground mb-1">
+                    Liam Wellisch
+                  </h3>
+                  <p className="text-gold font-medium text-sm">Co-Founder</p>
+                </div>
+
+                <p className="text-muted-foreground leading-relaxed mb-3 text-sm lg:text-base">
+                  Liam is a dedicated student athlete, competitive rower, and driven entrepreneur. 
+                  Known for his strong work ethic and discipline, Liam balances rigorous academic 
+                  commitments with high level athletic training, applying the same focus and 
+                  determination to everything he does.
+                </p>
+
+                <p className="text-muted-foreground leading-relaxed mb-3 text-sm lg:text-base">
+                  As a smart, motivated learner with a passion for problem solving and leadership, 
+                  he brings both academic strength and real world initiative to his work.
+                </p>
+
+                <p className="text-muted-foreground leading-relaxed mb-6 text-sm lg:text-base">
+                  As a co-founder of Wellisch Academic Group, Liam combines his love for learning 
+                  and business with a genuine desire to help other students succeed, creating an 
+                  environment that is both results driven and student focused.
+                </p>
+
+                {/* Credential Badges */}
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  {liamCredentials.map((cred) => (
+                    <div key={cred.label} className="text-center transition-all duration-300 hover:-translate-y-1">
+                      <div className="w-9 h-9 bg-accent/10 rounded-lg mx-auto mb-1.5 flex items-center justify-center">
+                        <cred.icon className="w-4 h-4 text-gold" />
+                      </div>
+                      <p className="font-semibold text-foreground text-xs">{cred.label}</p>
+                      <p className="text-muted-foreground text-[10px]">{cred.description}</p>
                     </div>
                   ))}
                 </div>
@@ -106,7 +187,7 @@ const Tutors = () => {
         </div>
 
         {/* Trust Note */}
-        <p className="text-center text-muted-foreground text-sm mt-8 max-w-xl mx-auto">
+        <p className="text-center text-muted-foreground text-xs lg:text-sm mt-8 max-w-xl mx-auto">
           All credentials are accurate and verifiable. We believe in complete transparency 
           with the families we work with.
         </p>
