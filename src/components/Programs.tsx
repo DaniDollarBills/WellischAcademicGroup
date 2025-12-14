@@ -20,7 +20,7 @@ const Programs = () => {
           <p className="text-slate-600 text-base lg:text-lg leading-relaxed px-2">
             Our programs are designed for students who value consistent, structured academic support. 
             We work with a limited number of students at any given time to ensure focus, continuity, 
-            and high-quality instruction.
+            and high quality instruction.
           </p>
         </div>
 
@@ -46,23 +46,23 @@ const Programs = () => {
               <span className="font-serif text-3xl text-slate-900">$199</span>
               <span className="text-slate-400 text-sm">/mo</span>
             </div>
-            <p className="text-slate-500 text-sm mb-4 lg:mb-5">Designed for students who want ongoing academic access without scheduled private sessions.</p>
+            <p className="text-slate-500 text-sm mb-4 lg:mb-5">Ongoing academic access without scheduled private sessions.</p>
             <ul className="space-y-2 lg:space-y-3 mb-5 lg:mb-6 flex-grow">
               <li className="flex items-start gap-2.5 text-sm text-slate-600">
                 <Check className="w-4 h-4 mt-0.5 text-slate-400 flex-shrink-0" />
-                <span>Access to scheduled live academic support calls</span>
+                <span>Drop in Zoom office hours during set times</span>
               </li>
               <li className="flex items-start gap-2.5 text-sm text-slate-600">
                 <Check className="w-4 h-4 mt-0.5 text-slate-400 flex-shrink-0" />
-                <span>Submit questions via dedicated support line</span>
+                <span>24/7 text support with quick responses</span>
               </li>
               <li className="flex items-start gap-2.5 text-sm text-slate-600">
                 <Check className="w-4 h-4 mt-0.5 text-slate-400 flex-shrink-0" />
-                <span>Asynchronous academic guidance</span>
+                <span>Ask questions anytime via phone</span>
               </li>
               <li className="flex items-start gap-2.5 text-sm text-slate-600">
                 <Check className="w-4 h-4 mt-0.5 text-slate-400 flex-shrink-0" />
-                <span>24-hour response window</span>
+                <span>Ongoing academic guidance</span>
               </li>
             </ul>
             <Button onClick={scrollToContact} variant="outline" className="w-full mt-auto">
@@ -89,7 +89,7 @@ const Programs = () => {
               <span className="font-serif text-3xl text-slate-900">$399</span>
               <span className="text-slate-400 text-sm">/mo</span>
             </div>
-            <p className="text-slate-500 text-sm mb-4 lg:mb-5">Structured weekly sessions with a fixed commitment to consistency and preparation.</p>
+            <p className="text-slate-500 text-sm mb-4 lg:mb-5">Structured weekly sessions focused on consistency and preparation.</p>
             <ul className="space-y-2 lg:space-y-3 mb-5 lg:mb-6 flex-grow">
               <li className="flex items-start gap-2.5 text-sm text-slate-600">
                 <Check className="w-4 h-4 mt-0.5 text-blue-500 flex-shrink-0" />
@@ -97,7 +97,7 @@ const Programs = () => {
               </li>
               <li className="flex items-start gap-2.5 text-sm text-slate-600">
                 <Check className="w-4 h-4 mt-0.5 text-blue-500 flex-shrink-0" />
-                <span>4 scheduled private sessions/month</span>
+                <span>4 scheduled private sessions per month</span>
               </li>
               <li className="flex items-start gap-2.5 text-sm text-slate-600">
                 <Check className="w-4 h-4 mt-0.5 text-blue-500 flex-shrink-0" />
@@ -105,7 +105,7 @@ const Programs = () => {
               </li>
               <li className="flex items-start gap-2.5 text-sm text-slate-600">
                 <Check className="w-4 h-4 mt-0.5 text-blue-500 flex-shrink-0" />
-                <span>Emphasis on preparation & accountability</span>
+                <span>Focus on preparation and accountability</span>
               </li>
             </ul>
             <Button onClick={scrollToContact} variant="outline" className="w-full mt-auto">
@@ -132,7 +132,7 @@ const Programs = () => {
               <span className="font-serif text-3xl text-slate-900">$649</span>
               <span className="text-slate-400 text-sm">/mo</span>
             </div>
-            <p className="text-slate-500 text-sm mb-4 lg:mb-5">Enhanced access with structured academic office hours for focused support.</p>
+            <p className="text-slate-500 text-sm mb-4 lg:mb-5">Enhanced access with more sessions and homework support hours.</p>
             <ul className="space-y-2 lg:space-y-3 mb-5 lg:mb-6 flex-grow">
               <li className="flex items-start gap-2.5 text-sm text-slate-600">
                 <Check className="w-4 h-4 mt-0.5 text-gold flex-shrink-0" />
@@ -140,11 +140,11 @@ const Programs = () => {
               </li>
               <li className="flex items-start gap-2.5 text-sm text-slate-600">
                 <Check className="w-4 h-4 mt-0.5 text-gold flex-shrink-0" />
-                <span>Homework Support Hours access</span>
+                <span>6 scheduled private sessions per month</span>
               </li>
               <li className="flex items-start gap-2.5 text-sm text-slate-600">
                 <Check className="w-4 h-4 mt-0.5 text-gold flex-shrink-0" />
-                <span>Time-boxed 1-on-1 help for immediate questions</span>
+                <span>Homework Support Hours access</span>
               </li>
               <li className="flex items-start gap-2.5 text-sm text-slate-600">
                 <Check className="w-4 h-4 mt-0.5 text-gold flex-shrink-0" />
@@ -182,11 +182,11 @@ const Programs = () => {
             <ul className="space-y-2 lg:space-y-3 mb-5 lg:mb-6 flex-grow">
               <li className="flex items-start gap-2.5 text-sm" style={{ color: '#e2e8f0' }}>
                 <Check className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: '#d4af37' }} />
-                <span>12 scheduled sessions/month</span>
+                <span>8 scheduled sessions per month</span>
               </li>
               <li className="flex items-start gap-2.5 text-sm" style={{ color: '#e2e8f0' }}>
                 <Check className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: '#d4af37' }} />
-                <span>Same-day academic responses</span>
+                <span>Same day academic responses</span>
               </li>
               <li className="flex items-start gap-2.5 text-sm" style={{ color: '#e2e8f0' }}>
                 <Check className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: '#d4af37' }} />
@@ -208,7 +208,7 @@ const Programs = () => {
           <div className="bg-white rounded-xl p-4 lg:p-5 border border-slate-200 text-center">
             <p className="text-slate-600 text-sm lg:text-base">
               <span className="font-medium text-slate-900">All sessions are flexible.</span>{" "}
-              Work on any subject during your session — math, science, essay writing, or any academic need.
+              Work on any subject during your session: math, science, essay writing, or any academic need.
             </p>
           </div>
         </div>
@@ -216,16 +216,16 @@ const Programs = () => {
         {/* Pay-As-You-Go Section */}
         <div className="max-w-sm mx-auto mb-10 lg:mb-12">
           <div className="bg-white rounded-xl p-5 border border-slate-200 text-center">
-            <p className="text-slate-500 text-sm mb-2">Pay-As-You-Go Tutoring</p>
+            <p className="text-slate-500 text-sm mb-2">Pay As You Go Tutoring</p>
             <div className="mb-2">
               <span className="font-serif text-2xl text-slate-900">$95</span>
               <span className="text-slate-400"> / hour</span>
             </div>
             <p className="text-xs text-slate-400 mb-2">
-              Scheduled in advance · Subject to availability
+              Scheduled in advance. Subject to availability.
             </p>
             <p className="text-xs text-slate-400">
-              Best suited for short-term or occasional support. Ongoing availability is prioritized for members.
+              Best suited for short term or occasional support. Ongoing availability is prioritized for members.
             </p>
           </div>
         </div>

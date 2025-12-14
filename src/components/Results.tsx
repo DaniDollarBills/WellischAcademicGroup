@@ -21,36 +21,36 @@ const Results = () => {
 
   const timeline = [
     {
-      week: "Week 1-2",
-      title: "Foundation & Quick Wins",
+      week: "Weeks 1 and 2",
+      title: "Foundation and Quick Wins",
       description: "Identify gaps, build confidence with immediate improvements on homework and quizzes",
-      improvement: "+5-10% on assignments",
+      improvement: "+5 to 10% on assignments",
     },
     {
-      week: "Week 3-4",
+      week: "Weeks 3 and 4",
       title: "Building Understanding",
       description: "Deep concept mastery, better test preparation, developing study habits",
       improvement: "+15% on tests",
     },
     {
-      week: "Month 2-3",
+      week: "Months 2 and 3",
       title: "Transformation",
-      description: "Full grade level improvement, independent problem-solving skills",
+      description: "Full grade level improvement, independent problem solving skills",
       improvement: "+1 letter grade",
     },
     {
       week: "Ongoing",
-      title: "Excellence & Habit Building",
+      title: "Excellence and Habit Building",
       description: "Maintain A/B grades, tackle advanced concepts, lifelong confidence",
       improvement: "+2 letter grades",
     },
   ];
 
   const beforeAfter = [
-    { subject: "Pre-Algebra", before: "D", after: "A-", weeks: "10 weeks", improvement: "+3 grades" },
-    { subject: "Algebra I", before: "C-", after: "A", weeks: "12 weeks", improvement: "+3 grades" },
-    { subject: "Geometry", before: "D+", after: "B+", weeks: "8 weeks", improvement: "+2 grades" },
-    { subject: "Biology", before: "C", after: "A-", weeks: "10 weeks", improvement: "+2 grades" },
+    { subject: "Pre Algebra", before: "D", after: "A", weeks: "10 weeks", improvement: "+3 grades" },
+    { subject: "Algebra I", before: "C", after: "A", weeks: "12 weeks", improvement: "+3 grades" },
+    { subject: "Geometry", before: "D", after: "B+", weeks: "8 weeks", improvement: "+2 grades" },
+    { subject: "Biology", before: "C", after: "A", weeks: "10 weeks", improvement: "+2 grades" },
   ];
 
   const features = [
@@ -88,7 +88,7 @@ const Results = () => {
             Real Data, Real Results
           </h2>
           <p className="text-muted-foreground text-base lg:text-lg px-2">
-            See what's possible with dedicated, personalized tutoring.
+            See what is possible with dedicated, personalized tutoring.
           </p>
         </div>
 

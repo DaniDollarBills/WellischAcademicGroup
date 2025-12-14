@@ -4,38 +4,38 @@ const services = [
   {
     icon: Calculator,
     title: "Math Tutoring",
-    description: "From 5th through 9th grade — including Pre-Algebra, Algebra, and Geometry. Clear explanations and step-by-step problem solving for every level.",
-    subjects: ["5th-9th Grade Math", "Pre-Algebra", "Algebra I", "Geometry"],
+    description: "Covering 5th through 9th grade, including Pre Algebra, Algebra, and Geometry. Clear explanations and step by step problem solving for every level.",
+    subjects: ["Grades 5 to 9", "Pre Algebra", "Algebra I", "Geometry"],
   },
   {
     icon: FlaskConical,
     title: "Science Support",
     description: "Build a strong foundation in science with support through 9th grade biology. Understand concepts, complete lab reports, and prepare for exams with confidence.",
-    subjects: ["General Science", "Life Science", "Earth Science", "Biology (9th Grade)"],
+    subjects: ["General Science", "Life Science", "Earth Science", "Biology"],
   },
   {
     icon: Pencil,
-    title: "Essay Writing & Review",
-    description: "From brainstorming to final draft — get help with essays, research papers, and written assignments. Learn to write clearly, argue effectively, and edit with precision.",
-    subjects: ["Essay Structure", "Thesis Development", "Editing & Revision", "Research Papers"],
+    title: "Essay Writing and Review",
+    description: "From brainstorming to final draft, get help with essays, research papers, and written assignments. Learn to write clearly, argue effectively, and edit with precision.",
+    subjects: ["Essay Structure", "Thesis Development", "Editing and Revision", "Research Papers"],
   },
   {
     icon: BookOpen,
     title: "Homework Support",
-    description: "Get help completing assignments correctly while actually understanding the material. We teach the 'why' behind every solution.",
+    description: "Get help completing assignments correctly while actually understanding the material. We teach the why behind every solution.",
     subjects: ["Daily Assignments", "Problem Sets", "Projects", "Worksheets"],
   },
   {
     icon: Target,
     title: "Test Preparation",
-    description: "Prepare with confidence for quizzes, unit tests, and standardized exams. Proven strategies and practice problems that work.",
-    subjects: ["Quizzes & Tests", "Midterms & Finals", "State Exams", "SAT Math"],
+    description: "Prepare with confidence for quizzes, unit tests, and exams. Proven strategies and practice problems that work.",
+    subjects: ["Quizzes and Tests", "Midterms and Finals", "State Exams", "Exam Review"],
   },
   {
     icon: Brain,
     title: "Flexible Sessions",
-    description: "Every session adapts to what you need most. Work on math one week, essay review the next — our tutors are prepared to support any academic subject.",
-    subjects: ["Any Subject", "Multi-Subject Sessions", "Student-Led Focus", "Adaptive Support"],
+    description: "Every session adapts to what you need most. Work on math one week, essay review the next. We are prepared to support any academic subject.",
+    subjects: ["Any Subject", "Multi Subject Sessions", "Student Led Focus", "Adaptive Support"],
   },
 ];
 
@@ -52,7 +52,7 @@ const Services = () => {
             Comprehensive Academic Support
           </h2>
           <p className="text-muted-foreground text-base lg:text-lg px-2">
-            More than just tutoring — we build habits, understanding, and lasting confidence across all subjects.
+            More than just tutoring. We build habits, understanding, and lasting confidence across all subjects.
           </p>
         </div>
 
