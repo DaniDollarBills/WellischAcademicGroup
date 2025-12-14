@@ -3,8 +3,9 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  base: "/WellischTutor/", // GitHub Pages repo name
+export default defineConfig(({ command }) => ({
+  // Use /WellischTutor/ for production (GitHub Pages), / for local dev
+  base: command === "build" ? "/WellischTutor/" : "/",
   plugins: [react()],
   resolve: {
     alias: {
@@ -17,4 +18,4 @@ export default defineConfig({
   build: {
     outDir: "dist",
   },
-});
+}));
