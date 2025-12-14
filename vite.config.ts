@@ -4,8 +4,8 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command }) => ({
-  // Use /WellischTutor/ for production (GitHub Pages), / for local dev
-  base: command === "build" ? "/WellischTutor/" : "/",
+  // Use /WellischAcademicGroup/ for production (GitHub Pages), / for local dev
+  base: command === "build" ? "/WellischAcademicGroup/" : "/",
   plugins: [react()],
   resolve: {
     alias: {

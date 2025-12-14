@@ -8,7 +8,7 @@
       // Single Page App redirect for GitHub Pages
       // Redirects all 404s to index.html with the path preserved
       const path = window.location.pathname;
-      const repo = '/WellischTutor';
+      const repo = '/WellischAcademicGroup';
       if (path.startsWith(repo)) {
         const newPath = path.slice(repo.length) || '/';
         sessionStorage.setItem('redirect', newPath + window.location.search + window.location.hash);
