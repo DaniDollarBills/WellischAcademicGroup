@@ -1,6 +1,6 @@
 import { Mail, Phone, MapPin, ArrowRight, TrendingUp, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -17,6 +17,19 @@ const Contact = () => {
     wantsConsultation: "",
     message: "",
   });
+
+  // Listen for programmatic changes to the plan dropdown (from Programs section)
+  useEffect(() => {
+    const planSelect = document.getElementById("planInterest") as HTMLSelectElement;
+    if (planSelect) {
+      const handlePlanChange = (e: Event) => {
+        const target = e.target as HTMLSelectElement;
+        setFormData(prev => ({ ...prev, planInterest: target.value }));
+      };
+      planSelect.addEventListener('change', handlePlanChange);
+      return () => planSelect.removeEventListener('change', handlePlanChange);
+    }
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -52,8 +65,8 @@ const Contact = () => {
 
       if (result.success) {
         toast({
-          title: "Message Sent Successfully!",
-          description: "We will get back to you within 24 to 48 hours.",
+          title: "Inquiry Submitted!",
+          description: "We will contact you within 24 to 48 hours.",
         });
         setFormData({ 
           parentName: "", 
@@ -112,8 +125,7 @@ ${formData.message}
             Ready to Get Started?
           </h2>
           <p className="text-muted-foreground text-base lg:text-lg px-2">
-            Fill out the form below and we will get back to you to discuss how we can help 
-            your student succeed.
+            Fill out the form below and we will get back to you shortly.
           </p>
         </div>
 
@@ -202,7 +214,7 @@ ${formData.message}
               
               {/* Parent Name */}
               <div>
-                <label htmlFor="parentName" className="block text-sm font-medium text-foreground mb-2">
+                <label htmlFor="parentName" className="block text-sm font-medium text-foreground mb-1.5">
                   Parent or Guardian Name
                 </label>
                 <input
@@ -212,15 +224,15 @@ ${formData.message}
                   value={formData.parentName}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all duration-300"
+                  className="w-full px-4 py-2.5 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all duration-300"
                   placeholder="Your name"
                 />
               </div>
 
               {/* Email and Phone */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1.5">
                     Email Address
                   </label>
                   <input
@@ -230,12 +242,12 @@ ${formData.message}
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all duration-300"
+                    className="w-full px-4 py-2.5 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all duration-300"
                     placeholder="you@email.com"
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-1.5">
                     Phone Number
                   </label>
                   <input
@@ -245,16 +257,16 @@ ${formData.message}
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all duration-300"
+                    className="w-full px-4 py-2.5 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all duration-300"
                     placeholder="(914) 555-1234"
                   />
                 </div>
               </div>
 
               {/* Student Name and School */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label htmlFor="studentName" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="studentName" className="block text-sm font-medium text-foreground mb-1.5">
                     Student Name
                   </label>
                   <input
@@ -264,12 +276,12 @@ ${formData.message}
                     value={formData.studentName}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all duration-300"
+                    className="w-full px-4 py-2.5 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all duration-300"
                     placeholder="Student's name"
                   />
                 </div>
                 <div>
-                  <label htmlFor="school" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="school" className="block text-sm font-medium text-foreground mb-1.5">
                     School
                   </label>
                   <input
@@ -279,61 +291,61 @@ ${formData.message}
                     value={formData.school}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all duration-300"
+                    className="w-full px-4 py-2.5 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all duration-300"
                     placeholder="School name"
                   />
                 </div>
               </div>
 
-              {/* Student Grade */}
-              <div>
-                <label htmlFor="studentGrade" className="block text-sm font-medium text-foreground mb-2">
-                  Student Grade
-                </label>
-                <select
-                  id="studentGrade"
-                  name="studentGrade"
-                  value={formData.studentGrade}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all duration-300"
-                >
-                  <option value="">Select grade</option>
-                  <option value="5th">5th Grade</option>
-                  <option value="6th">6th Grade</option>
-                  <option value="7th">7th Grade</option>
-                  <option value="8th">8th Grade</option>
-                  <option value="9th">9th Grade</option>
-                </select>
+              {/* Grade and Plan side by side */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label htmlFor="studentGrade" className="block text-sm font-medium text-foreground mb-1.5">
+                    Student Grade
+                  </label>
+                  <select
+                    id="studentGrade"
+                    name="studentGrade"
+                    value={formData.studentGrade}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-2.5 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all duration-300"
+                  >
+                    <option value="">Select grade</option>
+                    <option value="5th">5th Grade</option>
+                    <option value="6th">6th Grade</option>
+                    <option value="7th">7th Grade</option>
+                    <option value="8th">8th Grade</option>
+                    <option value="9th">9th Grade</option>
+                  </select>
+                </div>
+                <div>
+                  <label htmlFor="planInterest" className="block text-sm font-medium text-foreground mb-1.5">
+                    Plan Interest
+                  </label>
+                  <select
+                    id="planInterest"
+                    name="planInterest"
+                    value={formData.planInterest}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-2.5 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all duration-300"
+                  >
+                    <option value="">Select a plan</option>
+                    <option value="Academic Support">Academic Support</option>
+                    <option value="Weekly Scholars">Weekly Scholars</option>
+                    <option value="Advanced Scholars">Advanced Scholars</option>
+                    <option value="Academic Fellowship">Academic Fellowship</option>
+                    <option value="Pay As You Go">Pay As You Go</option>
+                    <option value="Not sure yet">Not sure yet</option>
+                  </select>
+                </div>
               </div>
 
-              {/* Plan Interest */}
+              {/* Inquiry Type */}
               <div>
-                <label htmlFor="planInterest" className="block text-sm font-medium text-foreground mb-2">
-                  Which plan are you interested in?
-                </label>
-                <select
-                  id="planInterest"
-                  name="planInterest"
-                  value={formData.planInterest}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all duration-300"
-                >
-                  <option value="">Select a plan</option>
-                  <option value="Academic Support ($199/mo)">Academic Support ($199/mo)</option>
-                  <option value="Weekly Scholars ($399/mo)">Weekly Scholars ($399/mo)</option>
-                  <option value="Advanced Scholars ($649/mo)">Advanced Scholars ($649/mo)</option>
-                  <option value="Academic Fellowship ($899/mo)">Academic Fellowship ($899/mo)</option>
-                  <option value="Pay As You Go ($95/hr)">Pay As You Go ($95/hr)</option>
-                  <option value="Not sure yet">Not sure yet</option>
-                </select>
-              </div>
-
-              {/* Consultation */}
-              <div>
-                <label htmlFor="wantsConsultation" className="block text-sm font-medium text-foreground mb-2">
-                  Would you like a free consultation call?
+                <label htmlFor="wantsConsultation" className="block text-sm font-medium text-foreground mb-1.5">
+                  What would you like to do?
                 </label>
                 <select
                   id="wantsConsultation"
@@ -341,39 +353,38 @@ ${formData.message}
                   value={formData.wantsConsultation}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all duration-300"
+                  className="w-full px-4 py-2.5 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all duration-300"
                 >
                   <option value="">Select an option</option>
-                  <option value="Yes, I would like a consultation">Yes, I would like a consultation</option>
-                  <option value="No, just send me information">No, just send me information</option>
-                  <option value="Maybe, I have some questions first">Maybe, I have some questions first</option>
+                  <option value="Sign up for a membership">Sign up for a membership</option>
+                  <option value="Book a session">Book a session</option>
+                  <option value="Get more information">Get more information</option>
                 </select>
               </div>
 
               {/* Message */}
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                  Tell Us About Your Student
+                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-1.5">
+                  Tell Us About Your Student (optional)
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  rows={4}
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all duration-300 resize-none"
-                  placeholder="Current subjects, goals, schedule preferences, any specific challenges..."
+                  rows={3}
+                  className="w-full px-4 py-2.5 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all duration-300 resize-none"
+                  placeholder="Current subjects, goals, schedule preferences..."
                 />
               </div>
 
-              <Button variant="gold" size="lg" className="w-full transition-all duration-300 hover:scale-[1.02]" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit Inquiry"}
+              <Button variant="gold" size="lg" className="w-full" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Submit"}
                 <ArrowRight className="w-4 h-4" />
               </Button>
 
               <p className="text-muted-foreground text-xs text-center">
-                We typically respond within 24 to 48 hours.
+                We will contact you within 24 to 48 hours.
               </p>
             </form>
           </div>

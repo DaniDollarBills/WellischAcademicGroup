@@ -2,7 +2,15 @@ import { Check, MessageCircle, Calendar, Clock, Crown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Programs = () => {
-  const scrollToContact = () => {
+  const scrollToContactWithPlan = (plan: string) => {
+    // Set the plan in the dropdown before scrolling
+    const planSelect = document.getElementById("planInterest") as HTMLSelectElement;
+    if (planSelect) {
+      planSelect.value = plan;
+      // Trigger change event so React state updates
+      const event = new Event('change', { bubbles: true });
+      planSelect.dispatchEvent(event);
+    }
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -22,12 +30,17 @@ const Programs = () => {
             We work with a limited number of students at any given time to ensure focus, continuity, 
             and high quality instruction.
           </p>
+          {/* Urgency badge */}
+          <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-800 text-sm font-medium px-4 py-2 rounded-full mt-4">
+            <div className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
+            Limited spots available for new students
+          </div>
         </div>
 
-        {/* Membership Cards - Mobile First */}
+        {/* Membership Cards */}
         <div className="space-y-4 lg:space-y-0 lg:grid lg:grid-cols-4 lg:gap-6 max-w-6xl mx-auto mb-12 lg:mb-16">
           
-          {/* Tier 1 - Academic Support Membership */}
+          {/* Tier 1 */}
           <div className="flex flex-col bg-white rounded-2xl p-5 lg:p-6 border border-slate-200 hover:border-slate-300 transition-all duration-300">
             <div className="flex items-start gap-4 lg:block">
               <div className="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center flex-shrink-0 lg:mb-5">
@@ -65,12 +78,12 @@ const Programs = () => {
                 <span>Ongoing academic guidance</span>
               </li>
             </ul>
-            <Button onClick={scrollToContact} variant="outline" className="w-full mt-auto">
+            <Button onClick={() => scrollToContactWithPlan("Academic Support")} variant="outline" className="w-full mt-auto">
               Get Started
             </Button>
           </div>
 
-          {/* Tier 2 - Weekly Scholars Program */}
+          {/* Tier 2 */}
           <div className="flex flex-col bg-white rounded-2xl p-5 lg:p-6 border border-slate-200 hover:border-slate-300 transition-all duration-300">
             <div className="flex items-start gap-4 lg:block">
               <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0 lg:mb-5">
@@ -108,12 +121,12 @@ const Programs = () => {
                 <span>Focus on preparation and accountability</span>
               </li>
             </ul>
-            <Button onClick={scrollToContact} variant="outline" className="w-full mt-auto">
+            <Button onClick={() => scrollToContactWithPlan("Weekly Scholars")} variant="outline" className="w-full mt-auto">
               Get Started
             </Button>
           </div>
 
-          {/* Tier 3 - Advanced Scholars Access */}
+          {/* Tier 3 */}
           <div className="flex flex-col bg-white rounded-2xl p-5 lg:p-6 border-2 border-gold/40 hover:border-gold transition-all duration-300">
             <div className="flex items-start gap-4 lg:block">
               <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center flex-shrink-0 lg:mb-5">
@@ -151,12 +164,12 @@ const Programs = () => {
                 <span>Priority response window</span>
               </li>
             </ul>
-            <Button onClick={scrollToContact} variant="gold" className="w-full mt-auto">
+            <Button onClick={() => scrollToContactWithPlan("Advanced Scholars")} variant="gold" className="w-full mt-auto">
               Get Started
             </Button>
           </div>
 
-          {/* Tier 4 - Academic Fellowship */}
+          {/* Tier 4 */}
           <div 
             className="flex flex-col rounded-2xl p-5 lg:p-6 border-2 border-gold shadow-lg hover:shadow-xl transition-all duration-300"
             style={{ background: 'linear-gradient(180deg, #1e293b 0%, #0f172a 100%)' }}
@@ -197,7 +210,7 @@ const Programs = () => {
                 <span>Priority scheduling during peak periods</span>
               </li>
             </ul>
-            <Button onClick={scrollToContact} variant="gold" className="w-full mt-auto">
+            <Button onClick={() => scrollToContactWithPlan("Academic Fellowship")} variant="gold" className="w-full mt-auto">
               Apply Now
             </Button>
           </div>
@@ -213,7 +226,7 @@ const Programs = () => {
           </div>
         </div>
 
-        {/* Pay-As-You-Go Section */}
+        {/* Pay As You Go */}
         <div className="max-w-sm mx-auto mb-10 lg:mb-12">
           <div className="bg-white rounded-xl p-5 border border-slate-200 text-center">
             <p className="text-slate-500 text-sm mb-2">Pay As You Go Tutoring</p>
@@ -221,24 +234,21 @@ const Programs = () => {
               <span className="font-serif text-2xl text-slate-900">$95</span>
               <span className="text-slate-400"> / hour</span>
             </div>
-            <p className="text-xs text-slate-400 mb-2">
+            <p className="text-xs text-slate-400 mb-3">
               Scheduled in advance. Subject to availability.
             </p>
-            <p className="text-xs text-slate-400">
-              Best suited for short term or occasional support. Ongoing availability is prioritized for members.
-            </p>
+            <Button onClick={() => scrollToContactWithPlan("Pay As You Go")} variant="outline" size="sm">
+              Book a Session
+            </Button>
           </div>
         </div>
 
-        {/* Closing Note */}
+        {/* Closing */}
         <div className="text-center max-w-2xl mx-auto px-2">
           <p className="text-slate-500 leading-relaxed text-sm">
             Because we work closely with each student, availability may vary during peak academic periods. 
             Families seeking ongoing support are encouraged to begin with a consultation.
           </p>
-          <Button onClick={scrollToContact} variant="gold" size="lg" className="mt-6">
-            Schedule a Consultation
-          </Button>
         </div>
       </div>
     </section>

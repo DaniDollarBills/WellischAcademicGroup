@@ -9,6 +9,7 @@ import Testimonials from "@/components/Testimonials";
 import Tutors from "@/components/Tutors";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import StickyCTA from "@/components/StickyCTA";
 
 const Index = () => {
   return (
@@ -24,6 +25,7 @@ const Index = () => {
       <Tutors />
       <Contact />
       <Footer />
+      <StickyCTA />
     </main>
   );
 };
