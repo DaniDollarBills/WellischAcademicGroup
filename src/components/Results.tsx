@@ -1,4 +1,4 @@
-import { TrendingUp, Target, Clock, Award, ArrowUpRight, CheckCircle, MessageCircle, Zap } from "lucide-react";
+import { TrendingUp, Award, ArrowUpRight, CheckCircle, MessageCircle, Zap } from "lucide-react";
 
 const Results = () => {
   const mainStats = [
@@ -41,7 +41,7 @@ const Results = () => {
     {
       week: "Ongoing",
       title: "Excellence & Habit Building",
-      description: "Maintain A/B grades, tackle advanced concepts, lifelong math confidence",
+      description: "Maintain A/B grades, tackle advanced concepts, lifelong confidence",
       improvement: "+2 letter grades",
     },
   ];
@@ -50,7 +50,7 @@ const Results = () => {
     { subject: "Pre-Algebra", before: "D", after: "A-", weeks: "10 weeks", improvement: "+3 grades" },
     { subject: "Algebra I", before: "C-", after: "A", weeks: "12 weeks", improvement: "+3 grades" },
     { subject: "Geometry", before: "D+", after: "B+", weeks: "8 weeks", improvement: "+2 grades" },
-    { subject: "Algebra II", before: "C", after: "A", weeks: "14 weeks", improvement: "+2 grades" },
+    { subject: "Biology", before: "C", after: "A-", weeks: "10 weeks", improvement: "+2 grades" },
   ];
 
   const features = [
@@ -77,62 +77,84 @@ const Results = () => {
   ];
 
   return (
-    <section id="results" className="py-20 lg:py-28 bg-background">
+    <section id="results" className="py-16 lg:py-28 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-12 lg:mb-16">
           <p className="text-gold font-medium text-sm uppercase tracking-wider mb-3">
             Proven Results
           </p>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground mb-4">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-5xl text-foreground mb-4">
             Real Data, Real Results
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-base lg:text-lg px-2">
             See what's possible with dedicated, personalized tutoring.
           </p>
         </div>
 
         {/* Main Stats */}
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-8 max-w-5xl mx-auto mb-16 lg:mb-20">
           {mainStats.map((stat) => (
             <div
               key={stat.label}
-              className="text-center p-8 bg-card rounded-2xl shadow-card border border-border/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              className="text-center p-6 lg:p-8 bg-card rounded-2xl shadow-card border border-border/50 transition-all duration-300 hover:shadow-lg"
             >
-              <div className="font-serif text-5xl lg:text-6xl text-gold mb-3">
+              <div className="font-serif text-4xl lg:text-6xl text-gold mb-2 lg:mb-3">
                 {stat.value}
               </div>
-              <div className="font-semibold text-foreground text-lg mb-2">
+              <div className="font-semibold text-foreground text-base lg:text-lg mb-1 lg:mb-2">
                 {stat.label}
               </div>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-muted-foreground text-xs lg:text-sm leading-relaxed">
                 {stat.description}
               </p>
             </div>
           ))}
         </div>
 
-        {/* Timeline Section */}
-        <div className="max-w-4xl mx-auto mb-20">
-          <h3 className="font-serif text-2xl text-foreground text-center mb-10">
+        {/* Timeline Section - Mobile Optimized */}
+        <div className="max-w-4xl mx-auto mb-16 lg:mb-20">
+          <h3 className="font-serif text-xl lg:text-2xl text-foreground text-center mb-8 lg:mb-10">
             Your Journey to Better Grades
           </h3>
-          <div className="relative">
+          
+          {/* Mobile Timeline */}
+          <div className="space-y-4 lg:hidden">
+            {timeline.map((item) => (
+              <div 
+                key={item.week}
+                className="bg-card rounded-xl p-4 border border-border/50 shadow-sm"
+              >
+                <span className="inline-block bg-gold/10 text-gold text-xs font-semibold px-3 py-1 rounded-full mb-2">
+                  {item.week}
+                </span>
+                <h4 className="font-serif text-lg text-foreground mb-1">{item.title}</h4>
+                <p className="text-muted-foreground text-sm mb-2">{item.description}</p>
+                <span className="inline-flex items-center gap-1 text-green-600 font-semibold text-sm">
+                  <ArrowUpRight className="w-4 h-4" />
+                  {item.improvement}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop Timeline */}
+          <div className="relative hidden lg:block">
             {/* Timeline line */}
-            <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-gold/30 transform md:-translate-x-1/2" />
+            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gold/30 transform -translate-x-1/2" />
             
             {timeline.map((item, index) => (
               <div 
                 key={item.week}
-                className={`relative flex flex-col md:flex-row gap-8 mb-12 last:mb-0 ${
-                  index % 2 === 0 ? 'md:flex-row-reverse' : ''
+                className={`relative flex gap-8 mb-12 last:mb-0 ${
+                  index % 2 === 0 ? 'flex-row-reverse' : ''
                 }`}
               >
                 {/* Timeline dot */}
-                <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-gold rounded-full transform -translate-x-1/2 mt-1.5 z-10" />
+                <div className="absolute left-1/2 w-4 h-4 bg-gold rounded-full transform -translate-x-1/2 mt-1.5 z-10" />
                 
                 {/* Content */}
-                <div className={`ml-8 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'}`}>
+                <div className={`w-1/2 ${index % 2 === 0 ? 'pr-12 text-right' : 'pl-12'}`}>
                   <span className="inline-block bg-gold/10 text-gold text-xs font-semibold px-3 py-1 rounded-full mb-2">
                     {item.week}
                   </span>
@@ -148,41 +170,41 @@ const Results = () => {
           </div>
         </div>
 
-        {/* Before/After Cards - Mobile Friendly */}
-        <div className="max-w-4xl mx-auto mb-20">
-          <h3 className="font-serif text-2xl text-foreground text-center mb-8">
+        {/* Before/After Cards */}
+        <div className="max-w-4xl mx-auto mb-16 lg:mb-20">
+          <h3 className="font-serif text-xl lg:text-2xl text-foreground text-center mb-6 lg:mb-8">
             Sample Student Transformations
           </h3>
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4">
             {beforeAfter.map((row) => (
               <div 
                 key={row.subject}
-                className="bg-card rounded-xl shadow-card border border-border/50 p-6 transition-all duration-300 hover:shadow-lg"
+                className="bg-card rounded-xl shadow-card border border-border/50 p-4 lg:p-6 transition-all duration-300 hover:shadow-lg"
               >
-                <div className="flex justify-between items-start mb-4">
+                <div className="flex justify-between items-start mb-3 lg:mb-4">
                   <div>
-                    <h4 className="font-semibold text-foreground text-lg">{row.subject}</h4>
-                    <p className="text-muted-foreground text-sm">{row.weeks}</p>
+                    <h4 className="font-semibold text-foreground text-base lg:text-lg">{row.subject}</h4>
+                    <p className="text-muted-foreground text-xs lg:text-sm">{row.weeks}</p>
                   </div>
-                  <span className="inline-flex items-center gap-1 text-green-600 font-bold text-sm bg-green-100 px-2 py-1 rounded-full">
+                  <span className="inline-flex items-center gap-1 text-green-600 font-bold text-xs lg:text-sm bg-green-100 px-2 py-1 rounded-full">
                     <ArrowUpRight className="w-3 h-3" />
                     {row.improvement}
                   </span>
                 </div>
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-3 lg:gap-4">
                   <div className="text-center">
-                    <span className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-red-100 text-red-600 font-bold text-xl">
+                    <span className="inline-flex items-center justify-center w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-red-100 text-red-600 font-bold text-lg lg:text-xl">
                       {row.before}
                     </span>
                     <p className="text-xs text-muted-foreground mt-1">Before</p>
                   </div>
                   <div className="flex-1 flex items-center justify-center">
                     <div className="w-full h-0.5 bg-gradient-to-r from-red-300 via-gold to-green-400 relative">
-                      <ArrowUpRight className="w-5 h-5 text-gold absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-card" />
+                      <ArrowUpRight className="w-4 h-4 lg:w-5 lg:h-5 text-gold absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-card" />
                     </div>
                   </div>
                   <div className="text-center">
-                    <span className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-green-100 text-green-600 font-bold text-xl">
+                    <span className="inline-flex items-center justify-center w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-green-100 text-green-600 font-bold text-lg lg:text-xl">
                       {row.after}
                     </span>
                     <p className="text-xs text-muted-foreground mt-1">After</p>
@@ -191,23 +213,23 @@ const Results = () => {
               </div>
             ))}
           </div>
-          <p className="text-center text-muted-foreground text-sm mt-4">
+          <p className="text-center text-muted-foreground text-xs lg:text-sm mt-4">
             *Representative examples based on student outcomes
           </p>
         </div>
 
         {/* Feature Cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6 max-w-6xl mx-auto">
           {features.map((item) => (
             <div
               key={item.title}
-              className="p-6 bg-subtle rounded-xl border border-border/50 transition-all duration-300 hover:shadow-md hover:-translate-y-1"
+              className="p-4 lg:p-6 bg-subtle rounded-xl border border-border/50 transition-all duration-300 hover:shadow-md"
             >
-              <div className="w-12 h-12 bg-gold/10 rounded-lg mb-4 flex items-center justify-center">
-                <item.icon className="w-6 h-6 text-gold" />
+              <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gold/10 rounded-lg mb-3 lg:mb-4 flex items-center justify-center">
+                <item.icon className="w-5 h-5 lg:w-6 lg:h-6 text-gold" />
               </div>
-              <h4 className="font-semibold text-foreground mb-2">{item.title}</h4>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <h4 className="font-semibold text-foreground text-sm lg:text-base mb-1 lg:mb-2">{item.title}</h4>
+              <p className="text-muted-foreground text-xs lg:text-sm leading-relaxed">
                 {item.description}
               </p>
             </div>
@@ -215,10 +237,10 @@ const Results = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="inline-flex items-center gap-3 bg-green-500/10 rounded-full px-6 py-3 border border-green-500/20">
-            <CheckCircle className="w-5 h-5 text-green-500" />
-            <span className="text-foreground font-medium">
+        <div className="text-center mt-12 lg:mt-16">
+          <div className="inline-flex items-center gap-2 lg:gap-3 bg-green-500/10 rounded-full px-4 lg:px-6 py-2 lg:py-3 border border-green-500/20">
+            <CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500" />
+            <span className="text-foreground font-medium text-sm lg:text-base">
               Join the students already seeing results
             </span>
           </div>
@@ -229,6 +251,3 @@ const Results = () => {
 };
 
 export default Results;
-
-
-

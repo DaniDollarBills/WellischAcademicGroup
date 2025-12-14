@@ -1,4 +1,4 @@
-import { Calculator, BookOpen, Target, Brain, MessageCircle, GraduationCap } from "lucide-react";
+import { Calculator, BookOpen, Target, Brain, Pencil, FlaskConical } from "lucide-react";
 
 const services = [
   {
@@ -6,6 +6,18 @@ const services = [
     title: "Math Tutoring",
     description: "From 5th grade math through 10th grade — including Pre-Algebra, Algebra, Geometry, and more. Clear explanations and step-by-step problem solving.",
     subjects: ["5th-6th Grade Math", "Pre-Algebra", "Algebra I & II", "Geometry"],
+  },
+  {
+    icon: FlaskConical,
+    title: "Science Support",
+    description: "Build a strong foundation in science with support through 9th grade biology. Understand concepts, complete lab reports, and prepare for exams with confidence.",
+    subjects: ["General Science", "Life Science", "Earth Science", "Biology (9th Grade)"],
+  },
+  {
+    icon: Pencil,
+    title: "Essay Writing & Review",
+    description: "From brainstorming to final draft — get help with essays, research papers, and written assignments. Learn to write clearly, argue effectively, and edit with precision.",
+    subjects: ["Essay Structure", "Thesis Development", "Editing & Revision", "Research Papers"],
   },
   {
     icon: BookOpen,
@@ -21,67 +33,55 @@ const services = [
   },
   {
     icon: Brain,
-    title: "Habit Building",
-    description: "We don't just teach math — we build lasting study habits, time management skills, and the confidence to tackle any challenge.",
-    subjects: ["Study Skills", "Time Management", "Organization", "Self-Discipline"],
-  },
-  {
-    icon: MessageCircle,
-    title: "Ongoing Support",
-    description: "Questions don't stop when sessions end. Text or message anytime for quick help with homework, concepts, or test prep.",
-    subjects: ["Text Support", "Quick Questions", "Homework Help", "Between Sessions"],
-  },
-  {
-    icon: GraduationCap,
-    title: "Concept Mastery",
-    description: "Go beyond memorization. We help students truly understand mathematical concepts so they can apply them to any problem.",
-    subjects: ["Deep Understanding", "Problem Solving", "Critical Thinking", "Application"],
+    title: "Flexible Sessions",
+    description: "Every session adapts to what you need most. Work on math one week, essay review the next — our tutors are prepared to support any academic subject.",
+    subjects: ["Any Subject", "Multi-Subject Sessions", "Student-Led Focus", "Adaptive Support"],
   },
 ];
 
 const Services = () => {
   return (
-    <section id="services" className="py-20 lg:py-28 bg-subtle">
+    <section id="services" className="py-16 lg:py-28 bg-subtle">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-12 lg:mb-16">
           <p className="text-gold font-medium text-sm uppercase tracking-wider mb-3">
             What We Offer
           </p>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground mb-4">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-5xl text-foreground mb-4">
             Comprehensive Academic Support
           </h2>
-          <p className="text-muted-foreground text-lg">
-            More than just tutoring — we build habits, understanding, and lasting confidence.
+          <p className="text-muted-foreground text-base lg:text-lg px-2">
+            More than just tutoring — we build habits, understanding, and lasting confidence across all subjects.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8 max-w-6xl mx-auto">
           {services.map((service) => (
             <div
               key={service.title}
-              className="bg-card rounded-xl p-6 lg:p-8 shadow-card border border-border/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              className="bg-card rounded-xl p-5 lg:p-8 shadow-card border border-border/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
             >
               {/* Icon */}
-              <div className="w-12 h-12 bg-navy/10 rounded-lg flex items-center justify-center mb-5">
-                <service.icon className="w-6 h-6 text-navy" />
+              <div className="w-10 h-10 lg:w-12 lg:h-12 bg-navy/10 rounded-lg flex items-center justify-center mb-4 lg:mb-5">
+                <service.icon className="w-5 h-5 lg:w-6 lg:h-6 text-navy" />
               </div>
 
               {/* Content */}
-              <h3 className="font-serif text-xl lg:text-2xl text-foreground mb-3">
+              <h3 className="font-serif text-lg lg:text-2xl text-foreground mb-2 lg:mb-3">
                 {service.title}
               </h3>
-              <p className="text-muted-foreground mb-5 leading-relaxed">
+              <p className="text-muted-foreground text-sm lg:text-base mb-4 lg:mb-5 leading-relaxed">
                 {service.description}
               </p>
 
               {/* Subject Tags */}
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-1.5 lg:gap-2">
                 {service.subjects.map((subject) => (
                   <span
                     key={subject}
-                    className="text-xs font-medium px-3 py-1 bg-secondary text-secondary-foreground rounded-full transition-all duration-300 hover:bg-gold/20 hover:text-gold"
+                    className="text-xs font-medium px-2.5 lg:px-3 py-1 bg-secondary text-secondary-foreground rounded-full transition-all duration-300 hover:bg-gold/20 hover:text-gold"
                   >
                     {subject}
                   </span>
