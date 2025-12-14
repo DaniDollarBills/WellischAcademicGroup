@@ -70,3 +70,6 @@ wellisch-academic/
 - [ ] Create tutor profiles
 - [ ] Set up domain and hosting
 - [ ] Add testimonials section
+
+
+
