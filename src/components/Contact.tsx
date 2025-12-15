@@ -46,7 +46,7 @@ const Contact = () => {
         },
         body: JSON.stringify({
           access_key: "7f3a8a67-0cc7-4cac-bb72-0ee8da9ee6bc",
-          to: "danielwellischny@gmail.com",
+          to: "wellischacademicgroup@gmail.com",
           from_name: formData.parentName,
           subject: subject,
           parent_name: formData.parentName,
@@ -97,7 +97,7 @@ Message:
 ${formData.message}
       `.trim();
 
-      const mailtoLink = `mailto:danielwellischny@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const mailtoLink = `mailto:wellischacademicgroup@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       window.open(mailtoLink, '_blank');
 
       toast({
@@ -147,8 +147,8 @@ ${formData.message}
                 </div>
                 <div>
                   <p className="font-medium text-foreground text-sm lg:text-base">Email</p>
-                  <a href="mailto:danielwellischny@gmail.com" className="text-muted-foreground hover:text-gold transition-colors text-sm lg:text-base">
-                    danielwellischny@gmail.com
+                  <a href="mailto:wellischacademicgroup@gmail.com" className="text-muted-foreground hover:text-gold transition-colors text-sm lg:text-base">
+                    wellischacademicgroup@gmail.com
                   </a>
                 </div>
               </div>
@@ -395,6 +395,7 @@ ${formData.message}
 };
 
 export default Contact;
+
 
 
 

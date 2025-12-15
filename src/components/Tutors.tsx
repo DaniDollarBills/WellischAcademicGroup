@@ -1,4 +1,4 @@
-import { Award, Clock, TrendingUp, PenTool, Lightbulb, Target } from "lucide-react";
+import { Award, Clock, TrendingUp, PenTool, Target } from "lucide-react";
 import danielPhoto from "@/assets/daniel-wellisch.jpeg";
 import liamPhoto from "@/assets/liam-wellisch.png";
 
@@ -28,19 +28,19 @@ const Tutors = () => {
 
   const liamCredentials = [
     {
+      icon: TrendingUp,
+      label: "99th Percentile",
+      description: "Quantitative reasoning",
+    },
+    {
       icon: Target,
-      label: "Driven Leader",
-      description: "Entrepreneurial mindset",
+      label: "ICDC Competitor",
+      description: "National level",
     },
     {
-      icon: Award,
-      label: "Strong Academic",
-      description: "Dedicated student",
-    },
-    {
-      icon: Lightbulb,
-      label: "Problem Solver",
-      description: "Analytical thinker",
+      icon: PenTool,
+      label: "Published Writer",
+      description: "Scholastic honoree",
     },
     {
       icon: Clock,
