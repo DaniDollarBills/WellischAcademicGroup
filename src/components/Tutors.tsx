@@ -152,25 +152,27 @@ const Tutors = () => {
                 </div>
 
                 <p className="text-muted-foreground leading-relaxed mb-3 text-sm lg:text-base">
-                  Liam is a high achieving student athlete, competitive rower, and driven entrepreneur 
-                  with a proven record of excellence across academics, competition, and creative pursuits. 
-                  He scores in the 99th percentile in quantitative reasoning, reflecting exceptional 
-                  analytical and problem solving ability, and has competed at the ICDC level, demonstrating 
-                  performance under pressure on a national stage.
+                  Liam is a high achieving student athlete and competitive rower who excels in both 
+                  academics and athletics. He scores in the 99th percentile in quantitative reasoning, 
+                  demonstrating exceptional analytical and problem solving abilities, and has competed 
+                  at the ICDC level, performing under pressure on a national stage. Liam maintains an 
+                  unweighted GPA of 99 and is an active member of his school's math club, where he has 
+                  participated in numerous regional mathematics competitions, further highlighting his 
+                  advanced quantitative strengths.
                 </p>
 
                 <p className="text-muted-foreground leading-relaxed mb-3 text-sm lg:text-base">
-                  Liam is an active member of his school's math club, where he has participated in 
-                  numerous regional mathematics competitions, further reinforcing his strength in 
-                  advanced quantitative thinking. Beyond STEM, he is also a published poet and imagery 
-                  writer, earning an honorable mention in the Scholastic Poetry Competition and receiving 
-                  recognition in a local newspaper for an original poetry piece.
+                  Beyond STEM, he is also a published poet and imagery writer, earning an Honorable 
+                  Mention in the Scholastic Poetry Competition and receiving recognition in a local 
+                  newspaper for an original poetry piece. He is currently conducting an independent 
+                  science research project focused on the relationship between genetics, climate change, 
+                  and global warming.
                 </p>
 
                 <p className="text-muted-foreground leading-relaxed mb-6 text-sm lg:text-base">
-                  As a co-founder of Wellisch Academic Group, Liam combines academic rigor, competitive 
-                  discipline, and creative insight with a relentless work ethic, bringing both prestige 
-                  and genuine commitment to helping students reach their highest potential.
+                  As a co-founder of Wellisch Academic Group, Liam brings together academic rigor, 
+                  competitive discipline, and creative insight with a relentless work ethic, demonstrating 
+                  a strong commitment to meeting students' needs in a thoughtful and caring manner.
                 </p>
 
                 {/* Credential Badges */}
