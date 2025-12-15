@@ -95,8 +95,7 @@ const Tutors = () => {
                 <p className="text-muted-foreground leading-relaxed mb-3 text-sm lg:text-base">
                   Daniel is a high school student and nationally competitive rower training 
                   six days per week at one of the top rowing programs in the country. He ranks 
-                  in the top 1% nationally in quantitative reasoning and scored a near perfect 
-                  math score on his first SAT attempt.
+                  in the top 1% nationally in quantitative reasoning.
                 </p>
 
                 <p className="text-muted-foreground leading-relaxed mb-3 text-sm lg:text-base">
