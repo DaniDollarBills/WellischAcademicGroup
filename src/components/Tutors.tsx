@@ -152,21 +152,25 @@ const Tutors = () => {
                 </div>
 
                 <p className="text-muted-foreground leading-relaxed mb-3 text-sm lg:text-base">
-                  Liam is a dedicated student athlete, competitive rower, and driven entrepreneur. 
-                  Known for his strong work ethic and discipline, Liam balances rigorous academic 
-                  commitments with high level athletic training, applying the same focus and 
-                  determination to everything he does.
+                  Liam is a high achieving student athlete, competitive rower, and driven entrepreneur 
+                  with a proven record of excellence across academics, competition, and creative pursuits. 
+                  He scores in the 99th percentile in quantitative reasoning, reflecting exceptional 
+                  analytical and problem solving ability, and has competed at the ICDC level, demonstrating 
+                  performance under pressure on a national stage.
                 </p>
 
                 <p className="text-muted-foreground leading-relaxed mb-3 text-sm lg:text-base">
-                  As a smart, motivated learner with a passion for problem solving and leadership, 
-                  he brings both academic strength and real world initiative to his work.
+                  Liam is an active member of his school's math club, where he has participated in 
+                  numerous regional mathematics competitions, further reinforcing his strength in 
+                  advanced quantitative thinking. Beyond STEM, he is also a published poet and imagery 
+                  writer, earning an honorable mention in the Scholastic Poetry Competition and receiving 
+                  recognition in a local newspaper for an original poetry piece.
                 </p>
 
                 <p className="text-muted-foreground leading-relaxed mb-6 text-sm lg:text-base">
-                  As a co-founder of Wellisch Academic Group, Liam combines his love for learning 
-                  and business with a genuine desire to help other students succeed, creating an 
-                  environment that is both results driven and student focused.
+                  As a co-founder of Wellisch Academic Group, Liam combines academic rigor, competitive 
+                  discipline, and creative insight with a relentless work ethic, bringing both prestige 
+                  and genuine commitment to helping students reach their highest potential.
                 </p>
 
                 {/* Credential Badges */}
