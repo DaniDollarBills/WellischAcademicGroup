@@ -70,7 +70,7 @@ const Tutors = () => {
         <div className="space-y-8 lg:space-y-12 max-w-5xl mx-auto">
           
           {/* Daniel */}
-          <div className="bg-card rounded-2xl shadow-card border border-border/50 overflow-hidden transition-all duration-500 hover:shadow-lg">
+          <div className="bg-card rounded-2xl border border-border/50 overflow-hidden">
             <div className="grid lg:grid-cols-5 gap-0">
               {/* Photo */}
               <div className="lg:col-span-2 bg-navy/5 flex items-center justify-center p-6 lg:p-0">
@@ -78,7 +78,7 @@ const Tutors = () => {
                   <img 
                     src={danielPhoto} 
                     alt="Daniel Wellisch" 
-                    className="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105"
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
               </div>
@@ -114,7 +114,7 @@ const Tutors = () => {
                 {/* Credential Badges */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                   {danielCredentials.map((cred) => (
-                    <div key={cred.label} className="text-center transition-all duration-300 hover:-translate-y-1">
+                    <div key={cred.label} className="text-center">
                       <div className="w-9 h-9 bg-accent/10 rounded-lg mx-auto mb-1.5 flex items-center justify-center">
                         <cred.icon className="w-4 h-4 text-gold" />
                       </div>
@@ -128,7 +128,7 @@ const Tutors = () => {
           </div>
 
           {/* Liam */}
-          <div className="bg-card rounded-2xl shadow-card border border-border/50 overflow-hidden transition-all duration-500 hover:shadow-lg">
+          <div className="bg-card rounded-2xl border border-border/50 overflow-hidden">
             <div className="grid lg:grid-cols-5 gap-0">
               {/* Photo */}
               <div className="lg:col-span-2 bg-navy/5 flex items-center justify-center p-6 lg:p-0">
@@ -136,7 +136,7 @@ const Tutors = () => {
                   <img 
                     src={liamPhoto} 
                     alt="Liam Wellisch" 
-                    className="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105"
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
               </div>
@@ -177,7 +177,7 @@ const Tutors = () => {
                 {/* Credential Badges */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                   {liamCredentials.map((cred) => (
-                    <div key={cred.label} className="text-center transition-all duration-300 hover:-translate-y-1">
+                    <div key={cred.label} className="text-center">
                       <div className="w-9 h-9 bg-accent/10 rounded-lg mx-auto mb-1.5 flex items-center justify-center">
                         <cred.icon className="w-4 h-4 text-gold" />
                       </div>

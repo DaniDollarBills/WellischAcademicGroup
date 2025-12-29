@@ -31,12 +31,12 @@ const StickyCTA = () => {
   if (!isVisible || isNearContact) return null;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 animate-fade-up">
+    <div className="fixed bottom-6 right-6 z-50">
       <Button 
         onClick={scrollToContact}
         variant="gold" 
         size="lg"
-        className="shadow-2xl hover:scale-105 transition-transform"
+        className="shadow-lg"
       >
         Get Started
         <ArrowRight className="w-4 h-4" />
@@ -46,6 +46,10 @@ const StickyCTA = () => {
 };
 
 export default StickyCTA;
+
+
+
+
 
 
 

@@ -97,7 +97,7 @@ const Results = () => {
           {mainStats.map((stat) => (
             <div
               key={stat.label}
-              className="text-center p-6 lg:p-8 bg-card rounded-2xl shadow-card border border-border/50 transition-all duration-300 hover:shadow-lg"
+              className="text-center p-6 lg:p-8 bg-card rounded-xl border border-border/50"
             >
               <div className="font-serif text-4xl lg:text-6xl text-gold mb-2 lg:mb-3">
                 {stat.value}
@@ -179,7 +179,7 @@ const Results = () => {
             {beforeAfter.map((row) => (
               <div 
                 key={row.subject}
-                className="bg-card rounded-xl shadow-card border border-border/50 p-4 lg:p-6 transition-all duration-300 hover:shadow-lg"
+                className="bg-card rounded-xl border border-border/50 p-4 lg:p-6"
               >
                 <div className="flex justify-between items-start mb-3 lg:mb-4">
                   <div>
@@ -223,7 +223,7 @@ const Results = () => {
           {features.map((item) => (
             <div
               key={item.title}
-              className="p-4 lg:p-6 bg-subtle rounded-xl border border-border/50 transition-all duration-300 hover:shadow-md"
+              className="p-4 lg:p-6 bg-subtle rounded-xl border border-border/50"
             >
               <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gold/10 rounded-lg mb-3 lg:mb-4 flex items-center justify-center">
                 <item.icon className="w-5 h-5 lg:w-6 lg:h-6 text-gold" />
@@ -236,21 +236,16 @@ const Results = () => {
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-12 lg:mt-16">
-          <div className="inline-flex items-center gap-2 lg:gap-3 bg-green-500/10 rounded-full px-4 lg:px-6 py-2 lg:py-3 border border-green-500/20">
-            <CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500" />
-            <span className="text-foreground font-medium text-sm lg:text-base">
-              Join the students already seeing results
-            </span>
-          </div>
-        </div>
       </div>
     </section>
   );
 };
 
 export default Results;
+
+
+
+
 
 
 

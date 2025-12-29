@@ -61,7 +61,7 @@ const Services = () => {
           {services.map((service) => (
             <div
               key={service.title}
-              className="bg-card rounded-xl p-5 lg:p-8 shadow-card border border-border/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              className="bg-card rounded-xl p-5 lg:p-8 shadow-card border border-border/50"
             >
               {/* Icon */}
               <div className="w-10 h-10 lg:w-12 lg:h-12 bg-navy/10 rounded-lg flex items-center justify-center mb-4 lg:mb-5">
@@ -81,7 +81,7 @@ const Services = () => {
                 {service.subjects.map((subject) => (
                   <span
                     key={subject}
-                    className="text-xs font-medium px-2.5 lg:px-3 py-1 bg-secondary text-secondary-foreground rounded-full transition-all duration-300 hover:bg-gold/20 hover:text-gold"
+                    className="text-xs font-medium px-2.5 lg:px-3 py-1 bg-secondary text-secondary-foreground rounded-full"
                   >
                     {subject}
                   </span>

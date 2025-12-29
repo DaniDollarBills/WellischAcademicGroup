@@ -141,7 +141,7 @@ ${formData.message}
             </p>
 
             <div className="space-y-5 lg:space-y-6">
-              <div className="flex items-start gap-4 transition-all duration-300 hover:translate-x-1">
+              <div className="flex items-start gap-4">
                 <div className="w-10 h-10 lg:w-12 lg:h-12 bg-navy/10 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Mail className="w-4 h-4 lg:w-5 lg:h-5 text-navy" />
                 </div>
@@ -153,7 +153,7 @@ ${formData.message}
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 transition-all duration-300 hover:translate-x-1">
+              <div className="flex items-start gap-4">
                 <div className="w-10 h-10 lg:w-12 lg:h-12 bg-navy/10 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Phone className="w-4 h-4 lg:w-5 lg:h-5 text-navy" />
                 </div>
@@ -165,7 +165,7 @@ ${formData.message}
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 transition-all duration-300 hover:translate-x-1">
+              <div className="flex items-start gap-4">
                 <div className="w-10 h-10 lg:w-12 lg:h-12 bg-navy/10 rounded-lg flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-4 h-4 lg:w-5 lg:h-5 text-navy" />
                 </div>
@@ -178,7 +178,7 @@ ${formData.message}
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 transition-all duration-300 hover:translate-x-1">
+              <div className="flex items-start gap-4">
                 <div className="w-10 h-10 lg:w-12 lg:h-12 bg-green-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
                   <TrendingUp className="w-4 h-4 lg:w-5 lg:h-5 text-green-600" />
                 </div>
@@ -395,6 +395,10 @@ ${formData.message}
 };
 
 export default Contact;
+
+
+
+
 
 
 

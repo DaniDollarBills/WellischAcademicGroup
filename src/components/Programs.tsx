@@ -30,18 +30,13 @@ const Programs = () => {
             We work with a limited number of students at any given time to ensure focus, continuity, 
             and high quality instruction.
           </p>
-          {/* Urgency badge */}
-          <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-800 text-sm font-medium px-4 py-2 rounded-full mt-4">
-            <div className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
-            Limited spots available for new students
-          </div>
         </div>
 
         {/* Membership Cards */}
         <div className="space-y-4 lg:space-y-0 lg:grid lg:grid-cols-4 lg:gap-6 max-w-6xl mx-auto mb-12 lg:mb-16">
           
           {/* Tier 1 */}
-          <div className="flex flex-col bg-white rounded-2xl p-5 lg:p-6 border border-slate-200 hover:border-slate-300 transition-all duration-300">
+          <div className="flex flex-col bg-white rounded-2xl p-5 lg:p-6 border border-slate-200">
             <div className="flex items-start gap-4 lg:block">
               <div className="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center flex-shrink-0 lg:mb-5">
                 <MessageCircle className="w-6 h-6 text-slate-500" />
@@ -84,7 +79,7 @@ const Programs = () => {
           </div>
 
           {/* Tier 2 */}
-          <div className="flex flex-col bg-white rounded-2xl p-5 lg:p-6 border border-slate-200 hover:border-slate-300 transition-all duration-300">
+          <div className="flex flex-col bg-white rounded-2xl p-5 lg:p-6 border border-slate-200">
             <div className="flex items-start gap-4 lg:block">
               <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0 lg:mb-5">
                 <Calendar className="w-6 h-6 text-blue-500" />
@@ -127,7 +122,7 @@ const Programs = () => {
           </div>
 
           {/* Tier 3 */}
-          <div className="flex flex-col bg-white rounded-2xl p-5 lg:p-6 border-2 border-gold/40 hover:border-gold transition-all duration-300">
+          <div className="flex flex-col bg-white rounded-2xl p-5 lg:p-6 border-2 border-gold/40">
             <div className="flex items-start gap-4 lg:block">
               <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center flex-shrink-0 lg:mb-5">
                 <Clock className="w-6 h-6 text-gold" />
@@ -171,7 +166,7 @@ const Programs = () => {
 
           {/* Tier 4 */}
           <div 
-            className="flex flex-col rounded-2xl p-5 lg:p-6 border-2 border-gold shadow-lg hover:shadow-xl transition-all duration-300"
+            className="flex flex-col rounded-2xl p-5 lg:p-6 border-2 border-gold shadow-lg"
             style={{ background: 'linear-gradient(180deg, #1e293b 0%, #0f172a 100%)' }}
           >
             <div className="flex items-start gap-4 lg:block">
@@ -256,6 +251,10 @@ const Programs = () => {
 };
 
 export default Programs;
+
+
+
+
 
 
 
