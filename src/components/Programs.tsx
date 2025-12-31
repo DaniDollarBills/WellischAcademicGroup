@@ -45,13 +45,13 @@ const Programs = () => {
                 <h3 className="font-serif text-xl text-slate-900 mb-1">Academic Support</h3>
                 <p className="text-xs text-slate-400 uppercase tracking-wider mb-2 lg:mb-4">Membership</p>
                 <div className="lg:hidden mb-2">
-                  <span className="font-serif text-2xl text-slate-900">$199</span>
+                  <span className="font-serif text-2xl text-slate-900">$149</span>
                   <span className="text-slate-400 text-sm">/mo</span>
                 </div>
               </div>
             </div>
             <div className="hidden lg:block mb-3">
-              <span className="font-serif text-3xl text-slate-900">$199</span>
+              <span className="font-serif text-3xl text-slate-900">$149</span>
               <span className="text-slate-400 text-sm">/mo</span>
             </div>
             <p className="text-slate-500 text-sm mb-4 lg:mb-5">Ongoing academic access without scheduled private sessions.</p>
@@ -88,13 +88,13 @@ const Programs = () => {
                 <h3 className="font-serif text-xl text-slate-900 mb-1">Weekly Scholars</h3>
                 <p className="text-xs text-blue-500 uppercase tracking-wider mb-2 lg:mb-4">Program</p>
                 <div className="lg:hidden mb-2">
-                  <span className="font-serif text-2xl text-slate-900">$399</span>
+                  <span className="font-serif text-2xl text-slate-900">$299</span>
                   <span className="text-slate-400 text-sm">/mo</span>
                 </div>
               </div>
             </div>
             <div className="hidden lg:block mb-3">
-              <span className="font-serif text-3xl text-slate-900">$399</span>
+              <span className="font-serif text-3xl text-slate-900">$299</span>
               <span className="text-slate-400 text-sm">/mo</span>
             </div>
             <p className="text-slate-500 text-sm mb-4 lg:mb-5">Structured weekly sessions focused on consistency and preparation.</p>
@@ -131,13 +131,13 @@ const Programs = () => {
                 <h3 className="font-serif text-xl text-slate-900 mb-1">Advanced Scholars</h3>
                 <p className="text-xs text-gold uppercase tracking-wider mb-2 lg:mb-4">Access</p>
                 <div className="lg:hidden mb-2">
-                  <span className="font-serif text-2xl text-slate-900">$649</span>
+                  <span className="font-serif text-2xl text-slate-900">$499</span>
                   <span className="text-slate-400 text-sm">/mo</span>
                 </div>
               </div>
             </div>
             <div className="hidden lg:block mb-3">
-              <span className="font-serif text-3xl text-slate-900">$649</span>
+              <span className="font-serif text-3xl text-slate-900">$499</span>
               <span className="text-slate-400 text-sm">/mo</span>
             </div>
             <p className="text-slate-500 text-sm mb-4 lg:mb-5">Enhanced access with more sessions and homework support hours.</p>
@@ -177,13 +177,13 @@ const Programs = () => {
                 <h3 className="font-serif text-xl mb-1" style={{ color: '#ffffff' }}>Academic Fellowship</h3>
                 <p className="text-xs uppercase tracking-wider mb-2 lg:mb-4" style={{ color: '#d4af37' }}>Limited Enrollment</p>
                 <div className="lg:hidden mb-2">
-                  <span className="font-serif text-2xl" style={{ color: '#ffffff' }}>$899</span>
+                  <span className="font-serif text-2xl" style={{ color: '#ffffff' }}>$699</span>
                   <span className="text-sm" style={{ color: '#94a3b8' }}>/mo</span>
                 </div>
               </div>
             </div>
             <div className="hidden lg:block mb-3">
-              <span className="font-serif text-3xl" style={{ color: '#ffffff' }}>$899</span>
+              <span className="font-serif text-3xl" style={{ color: '#ffffff' }}>$699</span>
               <span className="text-sm" style={{ color: '#94a3b8' }}>/mo</span>
             </div>
             <p className="text-sm mb-4 lg:mb-5" style={{ color: '#cbd5e1' }}>The highest level of ongoing academic support and access.</p>
@@ -226,7 +226,7 @@ const Programs = () => {
           <div className="bg-white rounded-xl p-5 border border-slate-200 text-center">
             <p className="text-slate-500 text-sm mb-2">Pay As You Go Tutoring</p>
             <div className="mb-2">
-              <span className="font-serif text-2xl text-slate-900">$95</span>
+              <span className="font-serif text-2xl text-slate-900">$75</span>
               <span className="text-slate-400"> / hour</span>
             </div>
             <p className="text-xs text-slate-400 mb-3">
@@ -251,6 +251,7 @@ const Programs = () => {
 };
 
 export default Programs;
+
 
 
 
