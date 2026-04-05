@@ -20,13 +20,14 @@ const Programs = () => {
             Pricing
           </p>
           <h2 className="font-serif text-2xl sm:text-3xl lg:text-5xl text-slate-900 mb-4 lg:mb-6">
-            Hourly tutoring — inquire for rates
+            Hourly tutoring — pricing varies
           </h2>
           <p className="text-slate-600 text-base lg:text-lg leading-relaxed px-2">
-            Private sessions are billed at an hourly rate. In most cases, tutoring runs around{" "}
-            <span className="font-medium text-slate-800">$80 per hour</span> — exact rates depend on your
-            situation, so reach out and we will confirm pricing, answer questions, and help you find a schedule
-            that works.
+            We do not sell packaged plans or monthly tiers.{" "}
+            <span className="font-medium text-slate-800">Pricing varies</span> by situation; every session is
+            billed <span className="font-medium text-slate-800">by the hour</span>, and rates are often around{" "}
+            <span className="font-medium text-slate-800">$80 per hour</span>. Reach out for a firm quote,
+            answers to your questions, and a schedule that fits your family.
           </p>
         </div>
 
@@ -39,9 +40,9 @@ const Programs = () => {
               <div>
                 <h3 className="font-serif text-xl lg:text-2xl text-slate-900 mb-2">How billing works</h3>
                 <p className="text-slate-600 text-sm lg:text-base leading-relaxed">
-                  You pay for the time you book. Session length and frequency are flexible. Pricing is usually
-                  around <span className="font-medium text-slate-800">$80/hour</span>; inquire for a firm
-                  quote based on your needs.
+                  You pay for the time you book — session length and frequency are flexible. Rates are hourly
+                  and <span className="font-medium text-slate-800">vary</span>; many sessions fall near{" "}
+                  <span className="font-medium text-slate-800">$80/hour</span>. Inquire for your exact rate.
                 </p>
               </div>
             </div>

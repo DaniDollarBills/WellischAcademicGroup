@@ -297,7 +297,7 @@ ${formData.message}
                 </div>
               </div>
 
-              {/* Grade and Plan side by side */}
+              {/* Grade and inquiry topic */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
                   <label htmlFor="studentGrade" className="block text-sm font-medium text-foreground mb-1.5">
