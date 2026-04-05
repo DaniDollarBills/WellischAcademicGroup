@@ -1,4 +1,5 @@
 import logo from "@/assets/logo.png";
+import FooterSignupCta from "@/components/FooterSignupCta";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -42,6 +43,8 @@ const Footer = () => {
               </button>
             ))}
           </div>
+
+          <FooterSignupCta />
 
           {/* Copyright */}
           <p className="text-primary-foreground/50 text-sm">
