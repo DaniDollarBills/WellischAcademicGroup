@@ -90,7 +90,7 @@ Phone: ${formData.phone}
 Student Name: ${formData.studentName}
 Student Grade: ${formData.studentGrade}
 School: ${formData.school}
-Plan Interest: ${formData.planInterest}
+Inquiry topic: ${formData.planInterest}
 Wants Consultation: ${formData.wantsConsultation}
 
 Message:
@@ -321,7 +321,7 @@ ${formData.message}
                 </div>
                 <div>
                   <label htmlFor="planInterest" className="block text-sm font-medium text-foreground mb-1.5">
-                    Plan Interest
+                    Inquiry topic
                   </label>
                   <select
                     id="planInterest"
@@ -331,12 +331,10 @@ ${formData.message}
                     required
                     className="w-full px-4 py-2.5 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all duration-300"
                   >
-                    <option value="">Select a plan</option>
-                    <option value="Academic Support">Academic Support</option>
-                    <option value="Weekly Scholars">Weekly Scholars</option>
-                    <option value="Advanced Scholars">Advanced Scholars</option>
-                    <option value="Academic Fellowship">Academic Fellowship</option>
-                    <option value="Pay As You Go">Pay As You Go</option>
+                    <option value="">Select an option</option>
+                    <option value="Inquire about hourly rates & pricing">Inquire about hourly rates &amp; pricing</option>
+                    <option value="Book a tutoring session">Book a tutoring session</option>
+                    <option value="General question">General question</option>
                     <option value="Not sure yet">Not sure yet</option>
                   </select>
                 </div>
@@ -356,7 +354,7 @@ ${formData.message}
                   className="w-full px-4 py-2.5 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all duration-300"
                 >
                   <option value="">Select an option</option>
-                  <option value="Sign up for a membership">Sign up for a membership</option>
+                  <option value="Discuss pricing & scheduling">Discuss pricing &amp; scheduling</option>
                   <option value="Book a session">Book a session</option>
                   <option value="Get more information">Get more information</option>
                 </select>

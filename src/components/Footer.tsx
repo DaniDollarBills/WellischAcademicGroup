@@ -13,7 +13,7 @@ const Footer = () => {
   const footerLinks = [
     { id: "services", label: "Services" },
     { id: "results", label: "Results" },
-    { id: "programs", label: "Programs" },
+    { id: "programs", label: "Pricing" },
     { id: "about", label: "About" },
     { id: "contact", label: "Contact" },
   ];
