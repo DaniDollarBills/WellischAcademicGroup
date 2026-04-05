@@ -6,18 +6,23 @@ const Tutors = () => {
   const danielCredentials = [
     {
       icon: TrendingUp,
-      label: "Top 1% Nationally",
-      description: "Quantitative reasoning",
+      label: "Perfect ACT Math",
+      description: "36 on ACT Mathematics",
     },
     {
       icon: Award,
-      label: "99 GPA (4.0)",
-      description: "Unweighted academic record",
+      label: "Published Researcher",
+      description: "Academic publications",
     },
     {
       icon: PenTool,
-      label: "Competition Writer",
-      description: "Research and essays",
+      label: "Philosophical Writer",
+      description: "Independent works",
+    },
+    {
+      icon: Target,
+      label: "Math Competitor",
+      description: "Select competitions",
     },
     {
       icon: Clock,
@@ -93,26 +98,29 @@ const Tutors = () => {
                 </div>
 
                 <p className="text-muted-foreground leading-relaxed mb-3 text-sm lg:text-base">
-                  Daniel is a high school student and nationally competitive rower training 
-                  six days per week at one of the top rowing programs in the country. He ranks 
-                  in the top 1% nationally in quantitative reasoning.
+                  Daniel is a published researcher, philosophical writer, and nationally
+                  competitive rower training six days per week at one of the top rowing
+                  programs in the country. He achieved a perfect score on the ACT
+                  Mathematics section and ranks in the top 1% nationally in quantitative
+                  reasoning.
                 </p>
 
                 <p className="text-muted-foreground leading-relaxed mb-3 text-sm lg:text-base">
-                  Beyond athletics, Daniel has distinguished himself in academic competitions 
-                  and scholarly pursuits. He has experience in competitive writing, having 
-                  participated in essay and research competitions at the regional and national 
-                  level.
+                  Beyond athletics, Daniel actively competes in select mathematics
+                  competitions and has distinguished himself in business competitions on
+                  the national stage. In his spare time he writes philosophical works
+                  exploring questions at the intersection of logic, ethics, and human
+                  experience.
                 </p>
 
                 <p className="text-muted-foreground leading-relaxed mb-6 text-sm lg:text-base">
-                  Maintaining a 99 unweighted GPA (4.0) while balancing elite athletics and 
-                  academic competitions demonstrates his exceptional discipline and commitment 
-                  to excellence.
+                  Maintaining a 99 unweighted GPA (4.0) while balancing published
+                  research, elite athletics, and competitive academics demonstrates his
+                  exceptional discipline and commitment to excellence.
                 </p>
 
                 {/* Credential Badges */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
                   {danielCredentials.map((cred) => (
                     <div key={cred.label} className="text-center">
                       <div className="w-9 h-9 bg-accent/10 rounded-lg mx-auto mb-1.5 flex items-center justify-center">
