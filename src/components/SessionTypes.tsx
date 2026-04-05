@@ -27,8 +27,9 @@ const SessionTypes = () => {
             In-Home or Online
           </h2>
           <p className="text-muted-foreground text-lg">
-            Choose the format that works best. We come to you, or meet virtually — 
-            same exceptional quality either way.
+            Most of our sessions are in-home — we find that in-person, face-to-face
+            learning produces the strongest results. Online is available when you need
+            the flexibility.
           </p>
         </div>
 
@@ -42,14 +43,15 @@ const SessionTypes = () => {
               </div>
               <div>
                 <h3 className="font-serif text-2xl text-foreground">In-Home</h3>
-                <p className="text-muted-foreground text-sm">Westchester County, NY</p>
+                <p className="text-gold text-xs font-medium uppercase tracking-wider">Most popular</p>
               </div>
             </div>
 
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              We come directly to your home for focused, one-on-one sessions in a 
-              comfortable environment. Also available at local libraries or quiet 
-              spots that work for your family.
+              In-home is our standard format. We come directly to you for focused,
+              one-on-one sessions in a comfortable environment — the in-person
+              connection keeps students engaged and accountable. Also available at
+              local libraries or quiet spots in Westchester.
             </p>
 
             <ul className="space-y-3">
