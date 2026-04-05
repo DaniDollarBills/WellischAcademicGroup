@@ -140,111 +140,96 @@ ${formData.message}
             Ready to Get Started?
           </h2>
           <p className="text-muted-foreground text-base lg:text-lg px-2">
-            Fill out the form below and we will get back to you shortly.
+            Fill out the form below, or call and text us directly to sign up.
           </p>
+        </div>
 
-          <div className="mt-8 bg-navy rounded-2xl p-5 sm:p-6 text-center shadow-lg border border-gold/20">
-            <p className="text-primary-foreground text-sm sm:text-base leading-relaxed mb-2">
-              <span className="font-semibold">To sign up</span>, message or call{" "}
-              <a href={SMS_HREF} className="text-gold hover:text-gold-light underline underline-offset-2">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+          {/* Left column: sign up CTA + contact info + QR */}
+          <div className="flex flex-col">
+            <div className="bg-navy rounded-2xl p-6 lg:p-8 text-center mb-8">
+              <h3 className="font-serif text-xl lg:text-2xl text-primary-foreground mb-3">
+                To sign up, call or text
+              </h3>
+              <a
+                href={TEL_HREF}
+                className="block font-serif text-3xl sm:text-4xl font-semibold text-gold hover:text-gold-light transition-colors mb-1"
+              >
                 {TEL_DISPLAY}
               </a>
-              . We will walk you through scheduling and next steps.
-            </p>
-            <p className="text-primary-foreground/70 text-xs sm:text-sm mb-5">
-              Scan the QR code to add Daniel Wellisch to your contacts.
-            </p>
-            <div className="flex flex-col items-center gap-2">
-              <a href={TEL_HREF} className="bg-white p-3 rounded-xl shadow-md">
+              <div className="flex gap-3 justify-center mt-4">
+                <a
+                  href={SMS_HREF}
+                  className="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-navy font-medium px-5 py-2.5 rounded-lg transition-colors text-sm"
+                >
+                  <Phone className="w-4 h-4" />
+                  Text us
+                </a>
+                <a
+                  href={TEL_HREF}
+                  className="inline-flex items-center gap-2 bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground font-medium px-5 py-2.5 rounded-lg transition-colors text-sm border border-primary-foreground/20"
+                >
+                  <Phone className="w-4 h-4" />
+                  Call us
+                </a>
+              </div>
+              <p className="text-primary-foreground/60 text-xs mt-4">
+                We will walk you through scheduling and next steps.
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center text-center mb-8">
+              <p className="text-muted-foreground text-sm mb-3">
+                Scan to add Daniel Wellisch to your contacts
+              </p>
+              <div
+                className="bg-white p-4 rounded-2xl shadow-md border border-border"
+                role="img"
+                aria-label="QR code to add Daniel Wellisch to your contacts"
+              >
                 <QRCode
                   value={CONTACT_QR_VALUE}
-                  size={160}
+                  size={180}
                   level="M"
                   bgColor="#ffffff"
                   fgColor="#0f172a"
                 />
-              </a>
-              <a
-                href={TEL_HREF}
-                className="font-serif text-xl sm:text-2xl font-semibold text-gold hover:text-gold-light transition-colors"
-              >
-                {TEL_DISPLAY}
-              </a>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
-          {/* Contact Info */}
-          <div>
-            <h3 className="font-serif text-xl lg:text-2xl text-foreground mb-6">
-              Get in Touch
-            </h3>
-            <p className="text-muted-foreground mb-8 leading-relaxed text-sm lg:text-base">
-              Have questions? Reach out directly. We are happy to discuss 
-              how Wellisch Academic Group can help your student.
-            </p>
-
-            <div className="space-y-5 lg:space-y-6">
+            <div className="space-y-4">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-navy/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-4 h-4 lg:w-5 lg:h-5 text-navy" />
+                <div className="w-10 h-10 bg-navy/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-4 h-4 text-navy" />
                 </div>
                 <div>
-                  <p className="font-medium text-foreground text-sm lg:text-base">Email</p>
-                  <a href="mailto:wellischacademicgroup@gmail.com" className="text-muted-foreground hover:text-gold transition-colors text-sm lg:text-base">
+                  <p className="font-medium text-foreground text-sm">Email</p>
+                  <a href="mailto:wellischacademicgroup@gmail.com" className="text-muted-foreground hover:text-gold transition-colors text-sm">
                     wellischacademicgroup@gmail.com
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-navy/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-4 h-4 lg:w-5 lg:h-5 text-navy" />
+                <div className="w-10 h-10 bg-navy/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-4 h-4 text-navy" />
                 </div>
                 <div>
-                  <p className="font-medium text-foreground text-sm lg:text-base">Call or Text</p>
-                  <a href="tel:+19089283214" className="text-muted-foreground hover:text-gold transition-colors text-sm lg:text-base">
-                    (908) 928-3214
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-navy/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-4 h-4 lg:w-5 lg:h-5 text-navy" />
-                </div>
-                <div>
-                  <p className="font-medium text-foreground text-sm lg:text-base">Service Area</p>
-                  <p className="text-muted-foreground text-sm lg:text-base">
-                    Westchester County, NY<br />
-                    <span className="text-xs lg:text-sm">Online sessions available</span>
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-green-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <TrendingUp className="w-4 h-4 lg:w-5 lg:h-5 text-green-600" />
-                </div>
-                <div>
-                  <p className="font-medium text-foreground text-sm lg:text-base">Proven Results</p>
-                  <p className="text-muted-foreground text-sm lg:text-base">
-                    Every student improves their grade<br />
-                    <span className="text-xs lg:text-sm">See results within weeks</span>
+                  <p className="font-medium text-foreground text-sm">Service Area</p>
+                  <p className="text-muted-foreground text-sm">
+                    Westchester County, NY · Online sessions available
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Guarantee Box */}
-            <div className="mt-8 p-5 lg:p-6 bg-green-500/5 rounded-xl border border-green-500/20">
+            <div className="mt-6 p-4 lg:p-5 bg-green-500/5 rounded-xl border border-green-500/20">
               <div className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 lg:w-6 lg:h-6 text-green-500 flex-shrink-0 mt-0.5" />
+                <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-semibold text-foreground mb-1 text-sm lg:text-base">Our Commitment</p>
-                  <p className="text-muted-foreground text-xs lg:text-sm">
-                    If you are not completely satisfied with your student's progress, 
+                  <p className="font-semibold text-foreground mb-1 text-sm">Our Commitment</p>
+                  <p className="text-muted-foreground text-xs">
+                    If you are not completely satisfied with your student's progress,
                     we will provide a full refund. Your satisfaction is our priority.
                   </p>
                 </div>
