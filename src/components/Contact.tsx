@@ -2,6 +2,21 @@ import { Mail, Phone, MapPin, ArrowRight, TrendingUp, CheckCircle } from "lucide
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
+import QRCode from "react-qr-code";
+
+const CONTACT_QR_VALUE = `BEGIN:VCARD
+VERSION:3.0
+FN:Daniel Wellisch
+N:Wellisch;Daniel;;;
+ORG:Wellisch Academic Group
+TEL;TYPE=CELL:+19089283214
+EMAIL:danielwellischny@gmail.com
+URL:https://wellischacademicgroup.com
+END:VCARD`;
+
+const TEL_DISPLAY = "(908) 928-3214";
+const TEL_HREF = "tel:+19089283214";
+const SMS_HREF = "sms:+19089283214";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -127,6 +142,36 @@ ${formData.message}
           <p className="text-muted-foreground text-base lg:text-lg px-2">
             Fill out the form below and we will get back to you shortly.
           </p>
+
+          <div className="mt-8 bg-navy rounded-2xl p-5 sm:p-6 text-center shadow-lg border border-gold/20">
+            <p className="text-primary-foreground text-sm sm:text-base leading-relaxed mb-2">
+              <span className="font-semibold">To sign up</span>, message or call{" "}
+              <a href={SMS_HREF} className="text-gold hover:text-gold-light underline underline-offset-2">
+                {TEL_DISPLAY}
+              </a>
+              . We will walk you through scheduling and next steps.
+            </p>
+            <p className="text-primary-foreground/70 text-xs sm:text-sm mb-5">
+              Scan the QR code to add Daniel Wellisch to your contacts.
+            </p>
+            <div className="flex flex-col items-center gap-2">
+              <a href={TEL_HREF} className="bg-white p-3 rounded-xl shadow-md">
+                <QRCode
+                  value={CONTACT_QR_VALUE}
+                  size={160}
+                  level="M"
+                  bgColor="#ffffff"
+                  fgColor="#0f172a"
+                />
+              </a>
+              <a
+                href={TEL_HREF}
+                className="font-serif text-xl sm:text-2xl font-semibold text-gold hover:text-gold-light transition-colors"
+              >
+                {TEL_DISPLAY}
+              </a>
+            </div>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
