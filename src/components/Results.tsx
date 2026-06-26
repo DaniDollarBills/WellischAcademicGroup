@@ -13,7 +13,7 @@ const Results = () => {
       description: "Average improvement with consistent tutoring",
     },
     {
-      value: "95%",
+      value: "97%",
       label: "Student Satisfaction",
       description: "Students and parents happy with their progress",
     },
