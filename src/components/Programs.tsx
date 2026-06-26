@@ -26,7 +26,7 @@ const Programs = () => {
             We do not sell packaged plans or monthly tiers.{" "}
             <span className="font-medium text-slate-800">Pricing varies</span> by situation; every session is
             billed <span className="font-medium text-slate-800">by the hour</span>, and rates are often around{" "}
-            <span className="font-medium text-slate-800">$80 per hour</span>. Reach out for a firm quote,
+            <span className="font-medium text-slate-800">$60 per hour</span>. Reach out for a firm quote,
             answers to your questions, and a schedule that fits your family.
           </p>
         </div>
@@ -42,7 +42,7 @@ const Programs = () => {
                 <p className="text-slate-600 text-sm lg:text-base leading-relaxed">
                   You pay for the time you book — session length and frequency are flexible. Rates are hourly
                   and <span className="font-medium text-slate-800">vary</span>; many sessions fall near{" "}
-                  <span className="font-medium text-slate-800">$80/hour</span>. Inquire for your exact rate.
+                  <span className="font-medium text-slate-800">$60/hour</span>. Inquire for your exact rate.
                 </p>
               </div>
             </div>
