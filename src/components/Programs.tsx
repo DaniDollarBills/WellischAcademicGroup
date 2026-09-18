@@ -20,14 +20,13 @@ const Programs = () => {
             Pricing
           </p>
           <h2 className="font-serif text-2xl sm:text-3xl lg:text-5xl text-slate-900 mb-4 lg:mb-6">
-            Hourly tutoring — pricing varies
+            Pricing on a case-by-case basis
           </h2>
           <p className="text-slate-600 text-base lg:text-lg leading-relaxed px-2">
             We do not sell packaged plans or monthly tiers.{" "}
-            <span className="font-medium text-slate-800">Pricing varies</span> by situation; every session is
-            billed <span className="font-medium text-slate-800">by the hour</span>, and rates are often around{" "}
-            <span className="font-medium text-slate-800">$60 per hour</span>. Reach out for a firm quote,
-            answers to your questions, and a schedule that fits your family.
+            <span className="font-medium text-slate-800">Pricing is set case by case</span>, based on your
+            student's needs, subject, and schedule. Reach out for a quote, answers to your questions, and a
+            schedule that fits your family.
           </p>
         </div>
 
@@ -40,9 +39,9 @@ const Programs = () => {
               <div>
                 <h3 className="font-serif text-xl lg:text-2xl text-slate-900 mb-2">How billing works</h3>
                 <p className="text-slate-600 text-sm lg:text-base leading-relaxed">
-                  You pay for the time you book — session length and frequency are flexible. Rates are hourly
-                  and <span className="font-medium text-slate-800">vary</span>; many sessions fall near{" "}
-                  <span className="font-medium text-slate-800">$60/hour</span>. Inquire for your exact rate.
+                  Billing is handled on a{" "}
+                  <span className="font-medium text-slate-800">case-by-case basis</span>. Session length and
+                  frequency are flexible, and you only pay for the time you book. Inquire for pricing.
                 </p>
               </div>
             </div>
@@ -59,7 +58,7 @@ const Programs = () => {
               ))}
             </ul>
             <Button
-              onClick={() => scrollToContactWithTopic("Inquire about hourly rates & pricing")}
+              onClick={() => scrollToContactWithTopic("Inquire about pricing")}
               variant="gold"
               size="lg"
               className="w-full sm:w-auto"
