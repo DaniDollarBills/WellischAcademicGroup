@@ -21,7 +21,7 @@ const Hero = () => {
           {/* Headline */}
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-primary-foreground leading-tight mb-6">
             Academic Tutoring{" "}
-            <span className="text-gold">for Grades 5 through 9</span>
+            <span className="text-gold">for Grades 5 through 12</span>
           </h1>
 
           {/* Subheadline */}
