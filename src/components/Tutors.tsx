@@ -1,6 +1,6 @@
 import { Award, Clock, TrendingUp, PenTool, Target } from "lucide-react";
-import danielPhoto from "@/assets/daniel-wellisch.jpeg";
-import liamPhoto from "@/assets/liam-wellisch.png";
+import danielPhoto from "@/assets/daniel-wellisch.webp";
+import liamPhoto from "@/assets/liam-wellisch.webp";
 
 const Tutors = () => {
   const danielCredentials = [
@@ -82,7 +82,11 @@ const Tutors = () => {
                 <div className="w-40 h-40 lg:w-full lg:h-full lg:min-h-[320px] overflow-hidden rounded-xl lg:rounded-none">
                   <img 
                     src={danielPhoto} 
-                    alt="Daniel Wellisch" 
+                    alt="Daniel Wellisch"
+                    width={1000}
+                    height={1270}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
@@ -143,7 +147,11 @@ const Tutors = () => {
                 <div className="w-40 h-40 lg:w-full lg:h-full lg:min-h-[320px] overflow-hidden rounded-xl lg:rounded-none">
                   <img 
                     src={liamPhoto} 
-                    alt="Liam Wellisch" 
+                    alt="Liam Wellisch"
+                    width={1000}
+                    height={1154}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover object-top"
                   />
                 </div>

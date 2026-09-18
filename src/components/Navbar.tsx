@@ -77,7 +77,7 @@ const Navbar = () => {
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="flex items-center gap-2 sm:gap-3 transition-transform duration-300 hover:scale-105"
             >
-              <img src={logo} alt="Wellisch Academic Group" className="w-8 h-8 rounded-lg" />
+              <img src={logo} alt="Wellisch Academic Group" width={32} height={32} decoding="async" className="w-8 h-8 rounded-lg" />
               <span className={`font-serif text-base sm:text-xl transition-colors duration-300 ${
                 isScrolled ? 'text-foreground' : 'text-primary-foreground'
               }`}>

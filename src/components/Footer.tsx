@@ -24,7 +24,7 @@ const Footer = () => {
         <div className="flex flex-col items-center gap-8">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <img src={logo} alt="Wellisch Academic Group" className="w-10 h-10 rounded-lg" />
+            <img src={logo} alt="Wellisch Academic Group" width={40} height={40} loading="lazy" decoding="async" className="w-10 h-10 rounded-lg" />
             <span className="font-serif text-xl text-primary-foreground">
               Wellisch<span className="text-gold"> Academic Group</span>
             </span>

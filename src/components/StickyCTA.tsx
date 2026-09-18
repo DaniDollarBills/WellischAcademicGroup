@@ -7,16 +7,25 @@ const StickyCTA = () => {
   const [isNearContact, setIsNearContact] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
+    let ticking = false;
+
+    const update = () => {
       // Show after scrolling past hero (about 600px)
-      const shouldShow = window.scrollY > 600;
-      setIsVisible(shouldShow);
+      setIsVisible(window.scrollY > 600);
 
       // Hide when near contact section
       const contactSection = document.getElementById("contact");
       if (contactSection) {
         const rect = contactSection.getBoundingClientRect();
         setIsNearContact(rect.top < window.innerHeight + 100);
+      }
+      ticking = false;
+    };
+
+    const handleScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
       }
     };
 
