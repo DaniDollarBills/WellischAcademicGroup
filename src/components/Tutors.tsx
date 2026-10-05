@@ -12,7 +12,7 @@ const Tutors = () => {
     {
       icon: Award,
       label: "Published Researcher",
-      description: "Academic publications",
+      description: "Co-authored with professors",
     },
     {
       icon: PenTool,
@@ -104,9 +104,9 @@ const Tutors = () => {
                 <p className="text-muted-foreground leading-relaxed mb-3 text-sm lg:text-base">
                   Daniel is a published researcher, philosophical writer, and nationally
                   competitive rower training six days per week at one of the top rowing
-                  programs in the country. He achieved a perfect score on the ACT
-                  Mathematics section and ranks in the top 1% nationally in quantitative
-                  reasoning.
+                  programs in the country. He has published academic research alongside
+                  university professors, achieved a perfect score on the ACT Mathematics
+                  section, and ranks in the top 1% nationally in quantitative reasoning.
                 </p>
 
                 <p className="text-muted-foreground leading-relaxed mb-3 text-sm lg:text-base">
@@ -118,6 +118,7 @@ const Tutors = () => {
                 </p>
 
                 <p className="text-muted-foreground leading-relaxed mb-6 text-sm lg:text-base">
+                  Daniel skipped a grade in school and is currently taking AP Calculus BC.
                   Maintaining a 99 unweighted GPA (4.0) while balancing published
                   research, elite athletics, and competitive academics demonstrates his
                   exceptional discipline and commitment to excellence.
@@ -170,8 +171,9 @@ const Tutors = () => {
                   Liam is a high achieving student athlete and competitive rower who excels in both 
                   academics and athletics. He scores in the 99th percentile in quantitative reasoning, 
                   demonstrating exceptional analytical and problem solving abilities, and has competed 
-                  at the ICDC level, performing under pressure on a national stage. Liam maintains an 
-                  unweighted GPA of 99 and is an active member of his school's math club, where he has 
+                  at the ICDC level, performing under pressure on a national stage. Liam skipped a grade 
+                  in school, is currently taking AP Calculus BC, maintains an unweighted GPA of 99, and 
+                  is an active member of his school's math club, where he has 
                   participated in numerous regional mathematics competitions, further highlighting his 
                   advanced quantitative strengths.
                 </p>
